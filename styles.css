@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'roboto', sans-serif;
     color: #f5f5f5;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('backgroundImage1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('backgroundImage2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
