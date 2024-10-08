@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('A_background_image_featuring_multiple_screens_disp.png');
+    background-image: url('backgroundImage.webp');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
