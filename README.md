@@ -1,4 +1,4 @@
-# Cristancho Clavijo's Portfolio
+# cristanchoclavijo's Portfolio
 Welcome to my professional portfolio! I’m Carlos Cristancho, a software developer with experience in C++, Python, and Agile methodologies.
 
 ## About Me
