@@ -1,0 +1,16 @@
+# Ignore images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Ignore VS Code temporary files
+.vscode/
+
+# Ignore other temporary and system files
+.DS_Store
+Thumbs.db
+
+# Ignore cache files
+*.cache
