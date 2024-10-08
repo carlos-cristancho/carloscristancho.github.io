@@ -1,13 +1,66 @@
+/* ===============================
+   Style variables
+   ===============================*/
+   :root {
+    --primary-color: #FFD700;
+    --secondary-color: #e0e0e0;
+    --background-color: rgba(0, 0, 0, 0.8);
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* ===============================
+   Header and Navigation
+   ===============================*/
+
+/* Styles for the header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que el encabezado esté siempre encima del contenido */
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFD700; /* Golden color for the links */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+/* ===============================
+   Body Styles
+   ===============================*/
+
 /* Background */
 body {
+    padding-top: 60px; /* Ensure that the content does not get hidden behind the header */
     margin: 0;
-    font-family: 'roboto', sans-serif;
-    color: #f5f5f5;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('backgroundImage2.jpg');
+    font-family: var(--font-family);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('backgroundImage1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    color: #e0e0e0;
+    color: var(--secondary-color);
 }
 
 /* Main Container Style */
@@ -50,3 +103,13 @@ ul {
 li {
     margin: 10px 0;
 }
+
+/* ===============================
+   Section Styles
+   ===============================*/
+
+/* ===============================
+   Footer
+   ===============================*/
+
+/* Estilos del footer */
