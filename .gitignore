@@ -1,6 +1,4 @@
 # Ignore images
-*.png
-*.jpg
 *.jpeg
 *.gif
 *.svg
@@ -14,3 +12,6 @@ Thumbs.db
 
 # Ignore cache files
 *.cache
+
+# Ignore the optional images folder
+Optional Images/
