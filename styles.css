@@ -1,11 +1,15 @@
 /* ===============================
    Style variables
    ===============================*/
-   :root {
-    --primary-color: #FFD700;
-    --secondary-color: #e0e0e0;
-    --background-color: rgba(0, 0, 0, 0.8);
-    --font-family: 'Roboto', sans-serif;
+:root {
+    --background-color: #1e293b;
+    --header-color: #1f2937;
+    --text-color: #f5f5f5;
+    --primary-color: #ffd700;
+    --link-color: #3b82f6;
+    --link-hover-color: #1d4ed8;
+    --accent-color: #10b981;
+    --divider-color: #b8860b;
 }
 
 /* ===============================
@@ -17,9 +21,9 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    background-color: var(--header-color); /* Semi-transparent background */
     padding: 10px 0;
-    z-index: 1000; /* Asegura que el encabezado esté siempre encima del contenido */
+    z-index: 1000; /* Ensure that the header is always above the content */
 }
 
 /* Navigation menu styles */
@@ -36,7 +40,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFD700; /* Golden color for the links */
+    color: var(--primary-color); /* Golden color for the links */
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
@@ -64,11 +68,11 @@ body {
     padding-top: 60px; /* Ensure that the content does not get hidden behind the header */
     margin: 0;
     font-family: var(--font-family);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('backgroundImage1.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), var(--background-color)), url('backgroundImage1.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* ===============================
@@ -90,13 +94,13 @@ body {
 }
 
 #about h2 {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 2em;
     margin-bottom: 15px;
 }
 
 #about p {
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 1.2em;
     line-height: 1.6;
     max-width: 600px;
@@ -116,7 +120,7 @@ body {
 h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    color: #FFD700;
+    color: var(--primary-color);
     font-family: 'Georgia', serif;
 }
 
@@ -126,13 +130,13 @@ p {
 }
 
 a {
-    color: #F5F5F5;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #FFD700;
+    color: var(--link-hover-color);
 }
 
 ul {
@@ -147,6 +151,19 @@ li {
 /* ===============================
    Section Styles
    ===============================*/
+
+/* ===============================
+   Divider Styles
+   ===============================*/
+
+/* Section divider */
+.section-divider {
+    background-color: var(--divider-color);
+    height: 4px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 2px;
+}
 
 /* ===============================
    Footer
