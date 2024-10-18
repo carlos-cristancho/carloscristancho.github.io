@@ -2,17 +2,14 @@
    Style variables
    ===============================*/
 :root {
-    --background-color: #1e293b; /* Page background */
-    --header-color: #ffffff; /* Background color of the header and navigation menu */
-    --text-color: #333; /* Main text color */
-    --primary-color: #ffd700; /* Golden color for titles */
+    --text-color: #000; /* Main text color */
     --link-color: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
-    --accent-color: #10b981; /* Accent color for buttons or highlighted elements */
     --divider-color: #b8860b; /* Color for dividers */
-    --black-rgb: 0, 0, 0; /* Black color in RGB */
-    --white-rgb: 255, 255, 255; /* White color in RGB */
     --general-background: #f0f0f0; /* General site background */
+    --contact-text: #ffffff; /* White color in RGB */
+    --contact-background: #c0202d;
+    --logo-menu-background: #ffffff;
 }
 
 /* ===============================
@@ -23,54 +20,90 @@
 header {
     background: url(backgroundImage1.jpg) no-repeat center center;
     background-size: cover;
-    height: 120vh; /*This value adjusts according to the space you want to occupy.*/
+    height: 80vh; /*This value adjusts according to the space you want to occupy.*/
     position: relative;
     z-index: 1;
 }
 
-/* Navigation Panel */
-nav {
+/* Navigation container */
+nav .nav-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background-color: var(--header-color); /* Navigation panel background */
-    color: var(--text-color); /* Menu text color */
-    box-shadow: 0 2px 4px rgba(var(--black-rgb), 0.4);
+    height: 60px;
+    padding: 0px 20px;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 10px 30px; /* Increase panel thickness */
     z-index: 1000;
+}
+
+/* Logo container */
+.logo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--logo-menu-background);
     height: 60px;
 }
-/* Logo styles */
-nav a img.logo{
+.logo {
     height: 200px;
     width: auto;
-    margin-right: 2px;
-    margin-top: 10px; /* Move the logo to the bottom */
+    margin: 22px 20px 0px 10px; /* First parameter move the logo to the bottom */
+    /*margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 22px;*/
 }
 
-/* Navigation menu styles */
-nav ul {
+/* Menu container */
+.menu-section {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    background-color: var(--logo-menu-background);
+    align-items: center;
+}
+.menu-section ul {
     list-style-type: none;
     display: flex;
-    margin: 0 120px; /* Move the navigation menu to the right */
-    padding: 0;
+    gap: 30px;
+    margin: -35px 0 20px 0; /* First parameter move the menu to the bottom */
 }
-
-nav ul li {
-    margin: 0 20px; /* Space out the menu items */
-}
-
-nav ul li a {
+.menu-section ul li a {
     color: var(--link-color);
     text-decoration: none;
     font-size: 1.1em;
 }
-
-nav ul li a:hover {
+.menu-section ul li a:hover {
     color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Contact container */
+.contact-section {
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--contact-background);
+    height: 75px;
+    padding: 0px 5px;
+    margin-left: 1100px;
+    margin-right: 0px;
+    margin-top: -75px;
+    margin-bottom: -50px;
+}
+.contact-link {
+    color: var(--contact-text);
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Move the contact word to the bottom */
+}
+.contact-link:hover {
     text-decoration: underline;
 }
 
