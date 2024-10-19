@@ -13,5 +13,5 @@ Thumbs.db
 # Ignore cache files
 *.cache
 
-# Ignore the optional images folder
-Optional Images/
+# Ignore the internal management folder
+Internal Management Files/
