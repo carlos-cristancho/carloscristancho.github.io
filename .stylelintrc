@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "no-empty-source": true,
+    "color-no-invalid-hex": true
+  }
+}

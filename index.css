@@ -1,26 +1,26 @@
 /* ===============================
    Style variables
-   ===============================*/
+   =============================== */
 :root {
     --text-color: #000; /* Main text color */
     --link-color: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
     --divider-color: #b8860b; /* Color for dividers */
     --general-background: #f0f0f0; /* General site background */
-    --contact-text: #ffffff; /* White color in RGB */
+    --contact-text: #fff; /* White color in RGB */
     --contact-background: #c0202d;
-    --logo-menu-background: #ffffff;
+    --logo-menu-background: #fff;
 }
 
 /* ===============================
    Header and Navigation
-   ===============================*/
+   =============================== */
 
 /* Header styles */
 header {
-    background: url(backgroundImage1.jpg) no-repeat center center;
+    background: url("backgroundImage1.jpg") no-repeat center center;
     background-size: cover;
-    height: 80vh; /*This value adjusts according to the space you want to occupy.*/
+    height: 80vh; /* This value adjusts according to the space you want to occupy. */
     position: relative;
     z-index: 1;
 }
@@ -30,7 +30,7 @@ nav .nav-container {
     display: flex;
     align-items: center;
     height: 60px;
-    padding: 0px 20px;
+    padding: 0 20px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -46,10 +46,11 @@ nav .nav-container {
     background-color: var(--logo-menu-background);
     height: 60px;
 }
+
 .logo {
     height: 200px;
     width: auto;
-    margin: 22px 20px 0px 10px; /* First parameter move the logo to the bottom */
+    margin: 22px 20px 0 10px; /* First parameter move the logo to the bottom */
 }
 
 /* Menu container */
@@ -60,17 +61,20 @@ nav .nav-container {
     background-color: var(--logo-menu-background);
     align-items: center;
 }
+
 .menu-section ul {
     list-style-type: none;
     display: flex;
     gap: 30px;
-    margin: -35px 0 20px 0; /* First parameter move the menu to the bottom */
+    margin: -35px 0 20px; /* First parameter move the menu to the bottom */
 }
+
 .menu-section ul li a {
     color: var(--link-color);
     text-decoration: none;
     font-size: 1.1em;
 }
+
 .menu-section ul li a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
@@ -84,15 +88,13 @@ nav .nav-container {
     align-items: center;
     background-color: var(--contact-background);
     height: 75px;
-    padding: 0px 5px;
-    margin-left: 1100px;
-    margin-right: 0px;
-    margin-top: -75px;
-    margin-bottom: -50px;
+    padding: 0 5px;
+    margin: -75px 0 -50px 1100px;
 }
+
 .contact-link {
     color: var(--contact-text);
-    padding: 15px 20px;
+    padding: 15px 40px;
     text-decoration: none;
     font-size: 1.1em;
     display: flex;
@@ -100,13 +102,14 @@ nav .nav-container {
     justify-content: center;
     margin-top: 10px; /* Move the contact word to the bottom */
 }
+
 .contact-link:hover {
     text-decoration: underline;
 }
 
 /* ===============================
    Global Styles
-   ===============================*/
+   =============================== */
 
 html {
     scroll-behavior: smooth;
@@ -114,7 +117,7 @@ html {
 
 /* ===============================
    Body Styles
-   ===============================*/
+   =============================== */
 
 /* Background */
 body {
@@ -126,7 +129,7 @@ body {
 
 /* ===============================
    About Section
-   ===============================*/
+   =============================== */
 
 .profile-pic {
     width: 150px;
@@ -138,7 +141,7 @@ body {
 
 #about {
     padding: 60px 20px;
-    background-color: rgba(White, 0.9); /* White background with a bit of transparency */
+    background-color: rgba(white, 0.9); /* White background with a bit of transparency */
     text-align: center;
     border-radius: 10px; /* Add a rounded border */
 }
@@ -168,11 +171,11 @@ body {
 
 /* ===============================
    Section Styles
-   ===============================*/
+   =============================== */
 
 /* ===============================
    Divider Styles
-   ===============================*/
+   =============================== */
 
 /* Section divider */
 .section-divider {
@@ -185,6 +188,6 @@ body {
 
 /* ===============================
    Footer
-   ===============================*/
+   =============================== */
 
 /* Estilos del footer */
