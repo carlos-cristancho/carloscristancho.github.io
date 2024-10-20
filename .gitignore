@@ -15,3 +15,4 @@ Thumbs.db
 
 # Ignore the internal management folder
 Internal Management Files/
+node_modules/
