@@ -1,0 +1,10 @@
+{
+  "attr-bans": ["align", "background", "bgcolor"],
+  "doctype-first": true,
+  "tag-bans": ["b", "i"],
+  "line-end-style": "lf",
+  "indent-style": "spaces",
+  "indent-width": 2,
+  "id-class-no-ad": true,
+  "img-req-alt": true
+}
