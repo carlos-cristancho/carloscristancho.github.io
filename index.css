@@ -138,6 +138,7 @@ header::before {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 50px; /* Adjust this value according to the header size */
 }
 
 /* ===============================
