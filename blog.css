@@ -1,7 +1,7 @@
 /* ===============================
    Style variables
    =============================== */
-:root {
+   :root {
     --text-color: #000; /* Main text color */
     --link-color: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
@@ -18,7 +18,7 @@
 
 /* Header styles */
 header {
-    background: url("backgroundImageIndex.jpg") no-repeat center center;
+    background: url("backgroundImageBlog.png") no-repeat center center;
     background-size: cover;
     height: 100vh; /* This value adjusts according to the space you want to occupy. */
     position: relative;
@@ -32,7 +32,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
@@ -59,7 +59,7 @@ header::before {
 .logo {
     height: 200px;
     width: auto;
-    margin: 22px 20px 0 10px; /* First parameter move the logo to the bottom */
+    margin: 40px 20px 0 10px; /* First parameter move the logo to the bottom */
 }
 
 /* Menu container */
@@ -69,13 +69,22 @@ header::before {
     justify-content: center;
     background-color: var(--logo-menu-background);
     align-items: center;
+    text-align: center;
 }
 
 .menu-section ul {
     list-style-type: none;
     display: flex;
-    gap: 75px;
+    gap: 50px;
     margin: -35px 0 20px; /* First parameter move the menu to the bottom */
+}
+
+.home-option {
+    margin-top: 10px;
+}
+
+.news-option {
+    margin-top: 10px;
 }
 
 .menu-section ul li a {
@@ -96,9 +105,9 @@ header::before {
     justify-content: flex-end;
     align-items: center;
     background-color: var(--contact-background);
-    height: 75px;
+    height: 87px;
     padding: 0 5px;
-    margin: -75px 0 -50px 1100px;
+    margin: -87px 0 -50px 1100px;
 }
 
 .contact-link {
@@ -109,7 +118,7 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px; /* Move the contact word to the bottom */
+    margin-top: 5px; /* Move the contact word to the bottom */
 }
 
 .contact-link:hover {
@@ -154,33 +163,19 @@ body {
 }
 
 /* ===============================
-   Home Section
+   Software Development Section
    =============================== */
-
-.home-grid {
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 20px;
-    align-items: start;
-    margin-top: 20px;
-}
-
-.home-image {
-    width: 100%;
-    padding-top: 20px;
-}
-
-.home-text{
+.software-text{
     text-align: justify;
     margin-bottom: 15px;
 }
 
-#home h2 {
+#software h2 {
     font-size: 2em;
     margin-bottom: 15px;
 }
 
-#home p {
+#software p {
     font-size: 1.2em;
     line-height: 1.6;
     max-width: 600px;
@@ -252,6 +247,9 @@ body {
     text-align: justify;
 }
 
+/* ===============================
+   Section Styles
+   =============================== */
 /* Main Container Style */
 .container {
     background: rgba(black, 0.7); /* Container background */
@@ -262,10 +260,6 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(black, 0.1);
 }
-
-/* ===============================
-   Section Styles
-   =============================== */
 
 /* ===============================
    Divider Styles
