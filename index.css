@@ -2,14 +2,15 @@
    Style variables
    =============================== */
 :root {
-    --text-color: #000; /* Main text color */
-    --link-color: #333; /* Link color */
+    --primary-text: #000; /* Main text color */
+    --secundary-text: #fff; /* White color in RGB */
+    --primary-background: #fff;
+    --secundary-background: #333;
+    --link-text: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
     --divider-color: #b8860b; /* Color for dividers */
     --general-background: #f0f0f0; /* General site background */
-    --contact-text: #fff; /* White color in RGB */
     --contact-background: #c0202d;
-    --logo-menu-background: #fff;
 }
 
 /* ===============================
@@ -52,7 +53,7 @@ header::before {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--logo-menu-background);
+    background-color: var(--primary-background);
     height: 60px;
 }
 
@@ -67,7 +68,7 @@ header::before {
     flex: 2;
     display: flex;
     justify-content: center;
-    background-color: var(--logo-menu-background);
+    background-color: var(--primary-background);
     align-items: center;
 }
 
@@ -79,7 +80,7 @@ header::before {
 }
 
 .menu-section ul li a {
-    color: var(--link-color);
+    color: var(--link-text);
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -102,7 +103,7 @@ header::before {
 }
 
 .contact-link {
-    color: var(--contact-text);
+    color: var(--secundary-text);
     padding: 15px 40px;
     text-decoration: none;
     font-size: 1.1em;
@@ -149,7 +150,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: var(--text-color);
+    color: var(--primary-text);
     background-color: var(--general-background); /* General site background */
 }
 
@@ -252,6 +253,9 @@ body {
     text-align: justify;
 }
 
+/* ===============================
+   Styles Section
+   =============================== */
 /* Main Container Style */
 .container {
     background: rgba(black, 0.7); /* Container background */
@@ -264,13 +268,8 @@ body {
 }
 
 /* ===============================
-   Section Styles
-   =============================== */
-
-/* ===============================
    Divider Styles
    =============================== */
-
 /* Section divider */
 .section-divider {
     background-color: var(--divider-color);
@@ -281,7 +280,46 @@ body {
 }
 
 /* ===============================
-   Footer
+   Footer Section
    =============================== */
+footer {
+    background-color: var(--secundary-background);
+    color: var(--secundary-text);
+    padding: 10px 0;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
 
-/* Estilos del footer */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
