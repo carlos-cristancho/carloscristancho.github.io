@@ -130,7 +130,7 @@ header::before {
    Welcome Section
    =============================== */
 
-   .text-overlay {
+.text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -140,6 +140,31 @@ header::before {
     z-index: 3;
     font-size: 1em;
     font-weight: bold;
+}
+
+.text-overlay h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.text-overlay h1::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: normal;
+    animation: blink 1s step-start infinite;
+    font-size: 1.2em; /* Adjust the cursor size */
+    line-height: 1.2; /* Adjust the cursor height */
+    vertical-align: bottom;
+}  
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* ===============================
