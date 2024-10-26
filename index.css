@@ -195,17 +195,51 @@ body {
     background-color: #ccf9d5; /* Card background */
 }
 
-.card-yellow {
-    background-color: #f9f5cc; /* Card background */
+.card-violet {
+    background-color: #fbecf9; /* Card background */
 }
 
 .card-red {
-    background-color: #f8dddf; /* Card background */
+    background-color: #fef1f0; /* Card background */
 }
 
 .card:hover {
     transform: translateY(-10px); /* Elevation effect */
 }
+
+.card-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.button-blue {
+    background-color: #201c65;
+}
+
+.button-green {
+    background-color: #18a46f;
+}
+
+.button-violet {
+    background-color: #aa1994;
+}
+
+.button-red {
+    background-color: #f55700;
+}
+
+.card-button:hover {
+    background-color: #555;
+}
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
