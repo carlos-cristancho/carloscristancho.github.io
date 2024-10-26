@@ -9,6 +9,14 @@
     --divider-color: #b8860b; /* Color for dividers */
     --general-background: #f0f0f0; /* General site background */
     --contact-background: #c0202d;
+    --blue-card: #d9edf8; /* Background card */
+    --blue-button: #201c65; /* Background button */
+    --green-card: #ccf9d5; /* Background card */
+    --green-button: #18a46f; /* Background button */
+    --violet-card: #fbecf9; /* Background card */
+    --violet-button: #aa1994; /* Background button */
+    --red-card: #fef1f0; /* Background card */
+    --red-button: #f55700; /* Background button */
 }
 
 /* Header styles ================================================ */
@@ -187,20 +195,20 @@ body {
     text-align: left; /* Center the text within the card */
 }
 
-.card-blue {
-    background-color: #d9edf8; /* Card background */
+.blue-card {
+    background-color: var(--blue-card);
 }
 
-.card-green {
-    background-color: #ccf9d5; /* Card background */
+.green-card {
+    background-color: var(--green-card);
 }
 
-.card-violet {
-    background-color: #fbecf9; /* Card background */
+.violet-card {
+    background-color: var(--violet-card);
 }
 
-.card-red {
-    background-color: #fef1f0; /* Card background */
+.red-card {
+    background-color: var(--red-card);
 }
 
 .card:hover {
@@ -220,29 +228,27 @@ body {
     text-align: center;
 }
 
-.button-blue {
-    background-color: #201c65;
+.blue-button {
+    background-color: var(--blue-button);
 }
 
-.button-green {
-    background-color: #18a46f;
+.green-button {
+    background-color: var(--green-button);
 }
 
-.button-violet {
-    background-color: #aa1994;
+.violet-button {
+    background-color: var(--violet-button);
 }
 
-.button-red {
-    background-color: #f55700;
+.red-button {
+    background-color: var(--red-button);
 }
 
 .card-button:hover {
     background-color: #555;
 }
 
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media query for small screens */
     .card-container {
         grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
     }
@@ -260,13 +266,98 @@ body {
     margin-bottom: 15px;
 }
 
-#projects p {
+.projects-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.project-card {
+    position: relative;
+    min-width: 200px;
+    max-width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 56px 60px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.blue-project {
+    background-color: var(--blue-card);
+}
+
+.green-project {
+    background-color: var(--green-card);
+}
+
+.violet-project {
+    background-color: var(--violet-card);
+}
+
+.red-project {
+    background-color: var(--red-card);
+}
+
+.project-card h3 {
+    text-decoration: underline;
+    color: var(--primary-text);
+}
+
+.project-card p {
     font-size: 1.2em;
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 350px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
+    color: var(--primary-text);
 }
+
+.project-card:hover {
+    transform: rotate(-1deg) scale(1.05) translateX(50px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* For the active card to be on top */
+}
+
+.project-card:nth-child(n+2) {
+    margin-left: -150px; /* Partially overlay the cards */
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.blue-projects-button {
+    background-color: var(--blue-button);
+}
+
+.green-projects-button {
+    background-color: var(--green-button);
+}
+
+.violet-projects-button {
+    background-color: var(--violet-button);
+}
+
+.red-projects-button {
+    background-color: var(--red-button);
+}
+
+.project-button:hover {
+    background-color: #555;
+}
+
 
 /* About Section ================================================ */
 .profile-pic {

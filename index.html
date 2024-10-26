@@ -11,9 +11,7 @@
 
     <body>
 
-<!-- ===============================
-     Header and Navigation
-     =============================== -->
+<!-- Header and Navigation -->
         <header>
             <nav class="nav-container">
                 <div class="logo-section">
@@ -48,46 +46,44 @@
             </div>
         </header>
 
-<!-- ===============================
-     Home Section
-     =============================== -->
+<!-- Home Section -->
         <section id="home" class="container">
             <h2>Home</h2>
             <div class="card-container">
                 <div class="home-text">
-                    <div class="card card-blue">
+                    <div class="card blue-card">
                         <p>
                             On this page, explore my key projects utilizing technologies like C++, 
                             Python, and JavaScript. These projects reflect the application of Agile 
                             methodology, aiming to deliver scalable solutions that address various 
                             technical challenges.
                         </p>
-                        <a href="#projects" class="button-blue card-button">Explore Projects</a>
+                        <a href="#projects" class="blue-button card-button">Explore Projects</a>
                     </div>
-                    <div class="card card-green">
+                    <div class="card green-card">
                         <p>
                             I also share some of the maintenance procedures I have executed as an 
                             industrial instrumentation and control technician to optimize system 
                             durability and safety. Here, I present the key techniques and best 
                             practices I learned in the field.
                         </p>
-                        <a href="blog.html#procedures" class="button-green card-button">Maintenance Procedures</a>
+                        <a href="blog.html#procedures" class="green-button card-button">Maintenance Procedures</a>
                     </div>
-                    <div class="card card-violet">
+                    <div class="card violet-card">
                         <p>
                             I cover standards such as SAE JA-1011/12, ISO 14224, API 581/576/510, 
                             NFPA 72/25, applied in RCM maintenance plans for SIS/BPCS/F&G systems and 
                             RBI for relief and safety valves.
                         </p>
-                        <a href="blog.html#ics" class="button-violet card-button">Instrumentation & Control</a>
+                        <a href="blog.html#ics" class="violet-button card-button">Instrumentation & Control</a>
                     </div>
-                    <div class="card card-red">
+                    <div class="card red-card">
                         <p>
                             Stay updated with the latest news in software development, industrial 
                             maintenance, and technology in general. Check out relevant analyses and 
                             trends in the news section.
                         </p>
-                        <a href="news.html#" class="button-red card-button">Latest News</a>
+                        <a href="news.html#" class="red-button card-button">Latest News</a>
                     </div>                    
                 </div>
             </div>
@@ -96,72 +92,60 @@
 <!-- Divider with hr -->
         <hr class="section-divider">
 
-<!-- ===============================
-     Projects Section
-     =============================== -->
+<!-- Projects Section -->
         <section id="projects" class="container">
             <h2>Projects</h2>
-            <div class="home-text">
-                <p>
-                    In this section, I present a selection of my most representative works, where 
-                    I have applied object-oriented programming principles and agile methodologies 
-                    to ensure that the results not only meet functional requirements but also 
-                    optimize resources and improve productivity.<br><br>
-                    My passion for technology has led me to tackle complex problems and design 
-                    scalable solutions that can be adapted to different environments. I invite you 
-                    to explore each of these projects, developed to solve technical challenges in 
-                    a creative and effective manner.
-                </p>
-                <ul>
-                    <li>
-                        <a href="https://github.com/carlos-cristancho/EngineFourierAnalyzer">
-                        EngineFourierAnalyzer</a>
-                        <p>
-                            Is a project designed to analyze signals and decompose them into 
-                            their frequency components using the FFTW library and C++. This 
-                            software aims to be an efficient and flexible tool for performing 
-                            Fourier analysis in industrial applications, with a particular focus 
-                            on fault detection in rotating machinery and predictive maintenance.
-                        </p>
-                    </li>
-                    <li>
-                        <a href="https://github.com/carlos-cristancho/FolderSyncTask">
-                        FolderSyncTask</a>
-                        <p>
-                            Is a Python-based project designed to synchronize the contents of 
-                            two directories, source and replica, by comparing files and 
-                            subdirectories. The program ensures that any new files, modified 
-                            files, or deleted files in the source folder are accurately 
-                            reflected in the replica folder, maintaining consistency between 
-                            both directories.
-                        </p>
-                    </li>
-                    <li>
-                        <a href="https://github.com/carlos-cristancho/AgilePlannerDevCode">
-                        AgileTrackSystem</a>
-                        <p>
-                            A project management tool built to facilitate Agile workflows. 
-                            AgileTrackSystem helps users track project progress, manage tasks, 
-                            and improve team collaboration by implementing key Agile principles.
-                        </p>
-                    </li>
-                    <li>
-                        <a href="https://github.com/carlos-cristancho/TaskManagerApp">
-                        TaskManagerApp</a>
-                        <p>
-                            Task manager using Python with SCRUM and Kanban methodologies.
-                        </p>
-                    </li>
-                </ul>
+            <div class="projects-container">
+                <div class="blue-project project-card">
+                    <h3>Engine Fourier Analyzer</h3>
+                    <p>
+                        Is a project designed to analyze signals and decompose them into 
+                        their frequency components using the FFTW library and C++. This 
+                        software aims to be an efficient and flexible tool for performing 
+                        Fourier analysis in industrial applications, with a particular focus 
+                        on fault detection in rotating machinery and predictive maintenance.
+                    </p>
+                    <a href="https://github.com/carlos-cristancho/EngineFourierAnalyzer" class="project-button blue-projects-button">
+                        Go to the repository</a>
+                </div>
+                <div class="green-project project-card">
+                    <h3>Folder Sync Task</h3>
+                    <p>
+                        Is a Python-based project designed to synchronize the contents of 
+                        two directories, source and replica, by comparing files and 
+                        subdirectories. The program ensures that any new files, modified 
+                        files, or deleted files in the source folder are accurately 
+                        reflected in the replica folder, maintaining consistency between 
+                        both directories.
+                    </p>
+                    <a href="https://github.com/carlos-cristancho/FolderSyncTask" class="project-button green-projects-button">
+                        Go to the repository</a>
+                </div>
+                <div class="violet-project project-card">
+                    <h3>Agile Track System</h3>
+                    <p>
+                        A project management tool built to facilitate Agile workflows. 
+                        AgileTrackSystem helps users track project progress, manage tasks, 
+                        and improve team collaboration by implementing key Agile principles.
+                    </p>
+                    <a href="https://github.com/carlos-cristancho/AgilePlannerDevCode" class="project-button violet-projects-button">
+                        Go to the repository</a>
+                </div>
+                <div class="red-project project-card">
+                    <h3>Task Manager App</h3>
+                    <p>
+                        Task manager using Python with SCRUM and Kanban methodologies.
+                    </p>
+                    <a href="https://github.com/carlos-cristancho/TaskManagerApp" class="project-button red-projects-button">
+                        Go to the repository</a>
+                </div>
             </div>
         </section>
     
 <!-- Divider with hr -->
         <hr class="section-divider">
 
-<!-- ===============================
-     About me Section
-     =============================== -->
+<!-- About me Section -->
         <section id="about" class="container">
             <img src="perfilImage.jpg" alt="Carlos Cristancho image profile" class="profile-pic">
             <h2>About me</h2>
@@ -192,9 +176,7 @@
 <!-- Divider with hr -->
         <hr class="section-divider">
 
-<!-- ===============================
-     Contact Section
-     =============================== -->
+<!-- Contact Section -->
         <section id="contact" class="container">
             <h2>Contact<br><br></h2>
             <p>If you have a project in mind, feel free to reach out!<br><br>
@@ -213,9 +195,7 @@
             </p>
         </section>
 
-<!-- ===============================
-     Footer Section
-     =============================== -->
+<!-- Footer Section -->
         <footer>
             <div class="footer-container">
                 <div class="footer-section">
