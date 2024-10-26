@@ -1,6 +1,4 @@
-/* ===============================
-   Style variables
-   =============================== */
+/* Style variables ================================================ */
 :root {
     --primary-text: #000; /* Main text color */
     --secundary-text: #fff; /* White color in RGB */
@@ -13,11 +11,7 @@
     --contact-background: #c0202d;
 }
 
-/* ===============================
-   Header and Navigation
-   =============================== */
-
-/* Header styles */
+/* Header styles ================================================ */
 header {
     background: url("backgroundImageIndex.jpg") no-repeat center center;
     background-size: cover;
@@ -37,7 +31,7 @@ header::before {
     z-index: 2;
 }
 
-/* Navigation container */
+/* Navigation container ================================================ */
 .nav-container {
     align-items: center;
     height: 60px;
@@ -47,7 +41,7 @@ header::before {
     z-index: 1000;
 }
 
-/* Logo container */
+/* Logo container ================================================ */
 .logo-section {
     flex: 1;
     display: flex;
@@ -63,7 +57,7 @@ header::before {
     margin: 22px 20px 0 10px; /* First parameter move the logo to the bottom */
 }
 
-/* Menu container */
+/* Menu container ================================================ */
 .menu-section {
     flex: 2;
     display: flex;
@@ -90,7 +84,7 @@ header::before {
     text-decoration: underline;
 }
 
-/* Contact container */
+/* Contact container ================================================ */
 .contact-section {
     flex: 0;
     display: flex;
@@ -117,10 +111,7 @@ header::before {
     text-decoration: underline;
 }
 
-/* ===============================
-   Welcome Section
-   =============================== */
-
+/* Welcome Section ================================================ */
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -158,20 +149,13 @@ header::before {
     }
 }
 
-/* ===============================
-   Global Styles
-   =============================== */
-
+/* Global Styles ================================================ */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px; /* Adjust this value according to the header size */
 }
 
-/* ===============================
-   Body Styles
-   =============================== */
-
-/* Background */
+/* Body Styles ================================================ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -179,9 +163,11 @@ body {
     background-color: var(--general-background); /* General site background */
 }
 
-/* ===============================
-   Home Section
-   =============================== */
+/* Home Section ================================================ */
+#home h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
 
 .home-text{
     display: flex;
@@ -191,31 +177,50 @@ body {
 }
 
 .card {
-    background-color: #f5f5f5; /* Card background */
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px; /* Rounded borders */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
     transition: transform 0.2s ease; /* Hover animation */
     flex: 1; /* Make the cards take up flexible space */
     min-width: 250px; /* Minimum card width */
-    max-width: 300px; /* Maximum card width */
-    text-align: center; /* Center the text within the card */
+    max-width: 400px; /* Maximum card width */
+    text-align: left; /* Center the text within the card */
+}
+
+.card-blue {
+    background-color: #d9edf8; /* Card background */
+}
+
+.card-green {
+    background-color: #ccf9d5; /* Card background */
+}
+
+.card-yellow {
+    background-color: #f9f5cc; /* Card background */
+}
+
+.card-red {
+    background-color: #f8dddf; /* Card background */
 }
 
 .card:hover {
     transform: translateY(-10px); /* Elevation effect */
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+}
+
 .card p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #333;
-    text-align: left;
 }
 
-/* ===============================
-   Projects Section
-   =============================== */
+/* Projects Section ================================================ */
 #projects h2 {
     font-size: 2em;
     margin-bottom: 15px;
@@ -229,10 +234,7 @@ body {
     text-align: justify;
 }
 
-/* ===============================
-   About Section
-   =============================== */
-
+/* About Section ================================================ */
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -261,9 +263,7 @@ body {
     text-align: justify;
 }
 
-/* ===============================
-   Contact Section
-   =============================== */
+/* Contact Section ================================================ */
 #contact h2 {
     font-size: 2em;
     margin-bottom: 15px;
@@ -277,32 +277,27 @@ body {
     text-align: justify;
 }
 
-/* ===============================
-   Styles Section
-   =============================== */
-/* Main Container Style */
+/* Main Container Style ================================================ */
 .container {
     background: rgba(black, 0.7); /* Container background */
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
     max-width: 800px;
-    margin: 50px auto -50px;
+    margin: 1px auto -50px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(black, 0.1);
 }
 
-/* Section divider */
+/* Section divider ================================================ */
 .section-divider {
     background-color: var(--divider-color);
     height: 4px;
     width: 80%;
-    margin: 50px auto;
+    margin: 70px auto;
     border-radius: 2px;
 }
 
-/* ===============================
-   Footer Section
-   =============================== */
+/* Footer Section ================================================ */
 footer {
     background-color: var(--secundary-background);
     color: var(--secundary-text);
