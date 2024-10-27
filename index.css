@@ -438,7 +438,7 @@ body {
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
 }
 
 .icon {
@@ -508,5 +508,75 @@ footer {
 @media screen and (max-width: 768px) {
     .footer-section {
         flex-basis: 100%;
+    }
+}
+
+/* Mobile Optimization (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Ajuste del Header */
+    header {
+        height: 50vh; /* Reduce el tamaño del header en dispositivos móviles */
+    }
+    
+    /* Ajuste del logo */
+    .logo {
+        height: 100px; /* Reduce el tamaño del logo en móviles */
+        margin: 10px auto; /* Centra el logo */
+    }
+
+    /* Ajuste de la barra de navegación */
+    .menu-section ul {
+        flex-direction: column; /* Coloca los elementos de la barra en una columna */
+        gap: 20px; /* Espacio entre elementos */
+        margin: 0; /* Ajusta el margen para centrar la barra */
+    }
+
+    /* Contenedor de proyectos */
+    .projects-container {
+        overflow-x: auto; /* Mantiene el desplazamiento horizontal en móviles */
+        padding: 0 10px; /* Añade algo de padding para evitar recortes en los bordes */
+    }
+
+    /* Ajuste en las tarjetas de proyecto */
+    .project-card {
+        min-width: 90%; /* Ocupa casi toda la pantalla en móviles */
+        max-width: 90%;
+        margin: 10px auto; /* Centra las tarjetas */
+    }
+
+    /* Sección de bienvenida */
+    .text-overlay h1 {
+        font-size: 1.5em; /* Reduce el tamaño del texto de bienvenida en móviles */
+    }
+
+    /* Contenedor de contacto */
+    .contact-section {
+        height: auto;
+        margin: 0;
+        padding: 10px; /* Ajuste de padding para centrado */
+        text-align: center;
+    }
+
+    .contact-link {
+        padding: 10px 20px; /* Ajusta el espacio para mejor apariencia en móviles */
+        font-size: 1em;
+    }
+
+    /* Ajustes en las tarjetas */
+    .home-text {
+        gap: 5px; /* Menor separación entre tarjetas */
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+    }
+
+    .card {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ajuste del contenedor general */
+    .container {
+        max-width: 90%;
+        margin: 10px auto; /* Ajusta para centrar en móviles */
     }
 }
