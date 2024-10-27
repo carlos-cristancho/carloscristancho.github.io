@@ -95,50 +95,60 @@
 <!-- Projects Section -->
         <section id="projects" class="container">
             <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="blue-project project-card">
-                    <h3>Engine Fourier Analyzer</h3>
-                    <p>
-                        Is a project designed to analyze signals and decompose them into 
-                        their frequency components using the FFTW library and C++. This 
-                        software aims to be an efficient and flexible tool for performing 
-                        Fourier analysis in industrial applications, with a particular focus 
-                        on fault detection in rotating machinery and predictive maintenance.
-                    </p>
-                    <a href="https://github.com/carlos-cristancho/EngineFourierAnalyzer" class="project-button blue-projects-button">
-                        Go to the repository</a>
+            <div class="scroll-container">
+                <button class="scroll-btn left-btn">&#60;</button> <!-- Left scroll button -->
+                <div class="projects-container">
+                    <div class="blue-project project-card">
+                        <h3>Engine Fourier Analyzer</h3>
+                        <p>
+                            Is a project designed to analyze signals and decompose them into 
+                            their frequency components using the FFTW library and C++. This 
+                            software aims to be an efficient and flexible tool for performing 
+                            Fourier analysis in industrial applications, with a particular focus 
+                            on fault detection in rotating machinery and predictive maintenance.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/EngineFourierAnalyzer" class="project-button blue-projects-button">
+                            Go to the repository</a>
+                    </div>
+                    <div class="green-project project-card">
+                        <h3>Folder Sync Task</h3>
+                        <p>
+                            Is a Python-based project designed to synchronize the contents of 
+                            two directories, source and replica, by comparing files and 
+                            subdirectories. The program ensures that any new files, modified 
+                            files, or deleted files in the source folder are accurately 
+                            reflected in the replica folder, maintaining consistency between 
+                            both directories.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/FolderSyncTask" class="project-button green-projects-button">
+                            Go to the repository</a>
+                    </div>
+                    <div class="violet-project project-card">
+                        <h3>Agile Track System</h3>
+                        <p>
+                            Agile Track System is a project management tool designed to organize 
+                            Agile workflows. It provides features for users to track each project's 
+                            progress, assign and prioritize tasks, and strengthen team collaboration. 
+                            It implements key Agile methodology principles, allowing processes to be 
+                            adapted flexibly and efficiently.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/AgilePlannerDevCode" class="project-button violet-projects-button">
+                            Go to the repository</a>
+                    </div>
+                    <div class="red-project project-card">
+                        <h3>Task Manager App</h3>
+                        <p>
+                            Task Manager is a Python tool designed to facilitate personal and individual 
+                            task management. It enables users to manage, prioritize, and monitor 
+                            task progress, helping them stay focused and achieve goals efficiently. With 
+                            an intuitive interface and features aimed at boosting productivity, Task 
+                            Manager is the perfect ally for reaching personal objectives.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/TaskManagerApp" class="project-button red-projects-button">
+                            Go to the repository</a>
+                    </div>
                 </div>
-                <div class="green-project project-card">
-                    <h3>Folder Sync Task</h3>
-                    <p>
-                        Is a Python-based project designed to synchronize the contents of 
-                        two directories, source and replica, by comparing files and 
-                        subdirectories. The program ensures that any new files, modified 
-                        files, or deleted files in the source folder are accurately 
-                        reflected in the replica folder, maintaining consistency between 
-                        both directories.
-                    </p>
-                    <a href="https://github.com/carlos-cristancho/FolderSyncTask" class="project-button green-projects-button">
-                        Go to the repository</a>
-                </div>
-                <div class="violet-project project-card">
-                    <h3>Agile Track System</h3>
-                    <p>
-                        A project management tool built to facilitate Agile workflows. 
-                        AgileTrackSystem helps users track project progress, manage tasks, 
-                        and improve team collaboration by implementing key Agile principles.
-                    </p>
-                    <a href="https://github.com/carlos-cristancho/AgilePlannerDevCode" class="project-button violet-projects-button">
-                        Go to the repository</a>
-                </div>
-                <div class="red-project project-card">
-                    <h3>Task Manager App</h3>
-                    <p>
-                        Task manager using Python with SCRUM and Kanban methodologies.
-                    </p>
-                    <a href="https://github.com/carlos-cristancho/TaskManagerApp" class="project-button red-projects-button">
-                        Go to the repository</a>
-                </div>
+                <button class="scroll-btn right-btn">&#62;</button> <!-- Right scroll button -->
             </div>
         </section>
     
@@ -209,7 +219,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 Carlos Cristancho. All rights reserved.</p>
             </div>
-        </footer>    
+        </footer>
+        
         <script src="typewriter.js"></script>
+        <script src="carousel-controls.js"></script>
     </body>
 </html>

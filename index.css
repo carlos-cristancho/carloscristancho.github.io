@@ -263,14 +263,52 @@ body {
 /* Projects Section ================================================ */
 #projects h2 {
     font-size: 2em;
-    margin-bottom: 15px;
+    margin: 15px;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center; /* Vertically align the buttons and the container */
+    position: relative; /* Necessary for positioning the buttons absolutely */
+    overflow: hidden; /* Hide the overflow content */
 }
 
 .projects-container {
     display: flex;
     gap: 20px;
-    overflow-x: scroll;
-    padding: 20px;
+    overflow-x: scroll; /* Horizontal scrolling */
+    scrollbar-width: none;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.projects-container::-webkit-scrollbar {
+    display: none; /* For WebKit-based browsers like Chrome and Safari */
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%; /* Vertical center */
+    transform: translateY(-50%); /* Fine-tuning for centering */
+    font-size: 2rem; /* Symbol size */
+    background-color: rgba(0, 0, 0, 0.4); /* Semitransparent background */
+    color: white; /* Symbol color */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 20; /* Ensure it is above the cards */
+}
+
+.left-btn {
+    left: 5px; /* Left button on the edge */
+}
+
+.right-btn {
+    right: 5px; /* right button on the edge */
+}
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
 }
 
 .project-card {
@@ -283,6 +321,7 @@ body {
     box-shadow: 0 56px 60px rgba(0, 0, 0, 1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
+    margin: 5px 20px;
 }
 
 .blue-project {
@@ -316,7 +355,7 @@ body {
 }
 
 .project-card:hover {
-    transform: rotate(-1deg) scale(1.05) translateX(50px);
+    transform: rotate(1deg) scale(1.05) translateX(50px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 10; /* For the active card to be on top */
 }
@@ -418,7 +457,8 @@ body {
     background-color: var(--divider-color);
     height: 4px;
     width: 80%;
-    margin: 70px auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
     border-radius: 2px;
 }
 
