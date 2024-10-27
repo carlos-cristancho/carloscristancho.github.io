@@ -49,6 +49,12 @@ header::before {
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .nav-container {
+        position: static; /* Cambia de fijo a estático en pantallas pequeñas */
+    }
+}
+
 /* Logo container ================================================ */
 .logo-section {
     flex: 1;
