@@ -441,6 +441,12 @@ body {
     text-align: justify;
 }
 
+.icon {
+    width: 24px;  /* Adjust the icon size */
+    height: auto;
+    margin-right: 4px;  /* Space between the icon and the text */
+}
+
 /* Main Container Style ================================================ */
 .container {
     background: rgba(black, 0.7); /* Container background */
