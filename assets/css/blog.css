@@ -105,9 +105,46 @@ body {
     background-color: var(--primary-bg);
 }
 
-.blog-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* Estilos para el enlace de vista previa del artículo */
+.fftwcpp-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.fftwcpp-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fftwcpp-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fftwcpp-cover-image {
+    width: 100%;
+    height: auto;
+}
+
+.fftwcpp-preview h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.fftwcpp-preview p {
+    font-size: 1em;
+    padding: 0 10px 10px;
+    color: #555;
 }
 
 /* Right vertical news bar ================================== */
