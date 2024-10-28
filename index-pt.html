@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Carlos Cristiancho, desenvolvedor de software especializado em C++, Python e metodologias ágeis. Explore os meus projetos e saiba mais sobre mim.">
+        <meta name="keywords" content="Carlos Cristiancho, desenvolvedor de software, C++, Python, metodologias ágeis, portefólio">
+        <title>Portefólio de Carlos Cristancho</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+
+<!-- Header and Navigation -->
+        <header>
+            <nav class="nav-container">
+                <div class="logo-section">
+                    <!-- Logo added to the navigation panel -->
+                    <a href="#">
+                        <img src="logo.png" alt="Logotipo do portefólio de Carlos Cristancho" class="logo">
+                    </a>
+                </div>
+                <nav class="menu-section" aria-label="Navegação Principal">
+                    <ul>
+                        <!-- Navigation menu -->
+                        <li><a href="#home" aria-label="Navegar para a secção inicial">
+                            Início</a></li>
+                        <li><a href="#projects" aria-label="Navegar para a secção de projetos">
+                            Projetos</a></li>
+                        <li><a href="blog.html" aria-label="Navegar para o blog">
+                            Blog</a></li>
+                        <li><a href="news.html" aria-label="Navegar para a página de notícias">
+                            Newsletters</a></li>
+                        <li><a href="#about" aria-label="Navegar para a seção sobre mim">
+                            Sobre mim</a></li>
+                    </ul>
+                </nav>
+                <div class="contact-section">
+                    <!-- Contact -->
+                    <a href="#contact" class="contact-link" aria-label="Navigate to contact section">
+                        Contacto</a>
+                </div>
+            </nav>
+            <div class="text-overlay">
+                <h1>BEM-VINDO AO PORTFÓLIO DE<br><br>CARLOS CRISTANCHO</h1>
+            </div>
+        </header>
+
+<!-- Home Section -->
+        <section id="home" class="container">
+            <h2>Início</h2>
+            <div class="card-container">
+                <div class="home-text">
+                    <div class="card blue-card">
+                        <p>
+                            Nesta página, explore os meus principais projetos desenvolvidos com 
+                            tecnologias como C++, Python e JavaScript. Estes projetos refletem a 
+                            aplicação da metodologia ágil, com o objetivo de oferecer soluções 
+                            escaláveis que respondem a diversos desafios técnicos.
+                        </p>
+                        <a href="#projects" class="blue-button card-button">Explorar Projetos</a>
+                    </div>
+                    <div class="card green-card">
+                        <p>
+                            Também partilho alguns dos procedimentos de manutenção que executei 
+                            como técnico de instrumentação e controlo industrial para otimizar a 
+                            durabilidade e segurança dos sistemas. Aqui, apresento as principais 
+                            técnicas e melhores práticas que aprendi no campo.
+                        </p>
+                        <a href="blog.html#procedures" class="green-button card-button">Procedimentos de Manutenção</a>
+                    </div>
+                    <div class="card violet-card">
+                        <p>
+                            Abordo normas como SAE JA-1011/12, ISO 14224, API 581/576/510, NFPA 
+                            72/25, aplicadas em planos de manutenção RCM para sistemas SIS/BPCS/F&G 
+                            e RBI para válvulas de alívio e segurança.
+                        </p>
+                        <a href="blog.html#ics" class="violet-button card-button">Instrumentação e Controlo</a>
+                    </div>
+                    <div class="card red-card">
+                        <p>
+                            Mantenha-se atualizado com as últimas novidades em desenvolvimento de 
+                            software, manutenção industrial e tecnologia em geral. Confira análises 
+                            relevantes e tendências na secção de notícias.
+                        </p>
+                        <a href="news.html#" class="red-button card-button">Últimas Notícias</a>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+<!-- Divider with hr -->
+        <hr class="section-divider">
+
+<!-- Projects Section -->
+        <section id="projects" class="container">
+            <h2>Projetos</h2>
+            <div class="scroll-container">
+                <button class="scroll-btn left-btn">&#60;</button> <!-- Left scroll button -->
+                <div class="projects-container">
+                    <div class="blue-project project-card">
+                        <h3>Analisador de Fourier de Motores</h3>
+                        <p>
+                            É um projeto desenvolvido para analisar sinais e decompô-los nos seus 
+                            componentes de frequência usando a biblioteca FFTW e C++. Este software 
+                            pretende ser uma ferramenta eficiente e flexível para realizar análise de 
+                            Fourier em aplicações industriais, com um foco particular na deteção de 
+                            falhas em máquinas rotativas e na manutenção preditiva.                                    
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/EngineFourierAnalyzer" class="project-button blue-projects-button">
+                            Ir para o repositório</a>
+                    </div>
+                    <div class="green-project project-card">
+                        <h3>Tarefa de Sincronização de Pastas</h3>
+                        <p>
+                            É um projeto em Python desenvolvido para sincronizar o conteúdo de duas 
+                            pastas, fonte e réplica, comparando arquivos e subdiretórios. O programa 
+                            garante que quaisquer novos arquivos, arquivos modificados ou arquivos 
+                            eliminados na pasta fonte sejam refletidos com precisão na pasta réplica, 
+                            mantendo a consistência entre ambas as pastas.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/FolderSyncTask" class="project-button green-projects-button">
+                            Ir para o repositório</a>
+                    </div>
+                    <div class="violet-project project-card">
+                        <h3>Sistema Agile Track</h3>
+                        <p>
+                            O Sistema Agile Track é uma ferramenta de gestão de projetos projetada 
+                            para organizar fluxos de trabalho ágeis. Oferece funcionalidades para que 
+                            os usuários acompanhem o progresso de cada projeto, atribuam e priorizem 
+                            tarefas e fortaleçam a colaboração da equipa. Implementa os princípios 
+                            fundamentais da metodologia ágil, permitindo que os processos sejam 
+                            adaptados de forma flexível e eficiente.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/AgilePlannerDevCode" class="project-button violet-projects-button">
+                            Ir para o repositório</a>
+                    </div>
+                    <div class="red-project project-card">
+                        <h3>Aplicação de Gestão de Tarefas</h3>
+                        <p>
+                            A Aplicação de Gestão de Tarefas é uma ferramenta em Python desenvolvida 
+                            para facilitar a gestão pessoal e individual de tarefas. Permite aos 
+                            usuários organizar, priorizar e monitorizar o progresso das tarefas, 
+                            ajudando-os a manter o foco e alcançar os objetivos de forma eficiente. 
+                            Com uma interface intuitiva e funcionalidades voltadas para aumentar a 
+                            produtividade, a Aplicação de Gestão de Tarefas é o aliado perfeito para 
+                            atingir objetivos pessoais.
+                        </p>
+                        <a href="https://github.com/carlos-cristancho/TaskManagerApp" class="project-button red-projects-button">
+                            Ir para o repositório</a>
+                    </div>
+                </div>
+                <button class="scroll-btn right-btn">&#62;</button> <!-- Right scroll button -->
+            </div>
+        </section>
+    
+<!-- Divider with hr -->
+        <hr class="section-divider">
+
+<!-- About me Section -->
+        <section id="about" class="container">
+            <img src="perfilImage.jpg" alt="Carlos Cristancho image profile" class="profile-pic">
+            <h2>Sobre mim</h2>
+            <div class="about-text">
+                <p>
+                    Olá, sou Carlos Cristancho, um desenvolvedor de software apaixonado por 
+                    programação orientada a objetos e pela resolução de problemas complexos. Utilizo 
+                    metodologias ágeis, como Scrum e Kanban, para gerir o desenvolvimento de 
+                    projetos, garantindo que cada entrega atenda aos padrões de eficiência e 
+                    escalabilidade. Especializo-me em desenvolvimento backend e na criação de 
+                    aplicações para desktop e dispositivos móveis, implementando soluções que 
+                    otimizam processos e melhoram a produtividade organizacional.<br><br>
+                    A minha experiência em Instrumentação e Controlo Industrial inclui a manutenção 
+                    de transmissores, interruptores, válvulas de controlo e válvulas de segurança e 
+                    alívio, onde trabalhei na instalação, configuração e diagnóstico de equipamentos 
+                    críticos. Assegurei que estes dispositivos operassem de forma fiável e precisa, 
+                    contribuindo para a segurança e eficiência das plantas industriais. Além disso, 
+                    liderei atividades de manutenção preventiva e corretiva em diversos equipamentos 
+                    de controlo industrial.<br><br>
+                    Também tenho ampla experiência no desenvolvimento de planos de manutenção 
+                    baseados na metodologia RCM (Manutenção Centrada na Confiabilidade) para 
+                    sistemas instrumentados de segurança (SIS) e sistemas de controlo de processos 
+                    básicos (BPCS), assim como na metodologia RBI (Inspeção Baseada em Risco) aplicada 
+                    a válvulas de segurança, alívio e segurança-alívio. Além disso, projetei e 
+                    executei planos de manutenção para sistemas de proteção contra incêndios, 
+                    garantindo a operabilidade e a conformidade com as normas de segurança nas 
+                    instalações industriais.
+                </p>
+            </div>
+        </section>
+
+<!-- Divider with hr -->
+        <hr class="section-divider">
+
+<!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2>Contacto<br><br></h2>
+            <p>Se tiver um projeto em mente, sinta-se à vontade para entrar em contacto!<br><br>
+                <img src="Gmail.png" alt="Email Icon" class="icon">
+                Email: <a href="mailto:ingenierocristanchoclavijo@gmail.com">
+                ingenierocristanchoclavijo@gmail.com</a><br><br>
+                <img src="LinkedIn.png" alt="LinkedIn Icon" class="icon">
+                LinkedIn: <a href="https://linkedin.com/in/carlos-cristancho">
+                carlos-cristancho</a><br><br>
+                <img src="GitHub.png" alt="GitHub Icon" class="icon">
+                GitHub: <a href="https://github.com/carlos-cristancho">
+                carlos-cristancho</a><br><br>
+                <img src="Discord.png" alt="Discord Icon" class="icon">
+                Discord: <a href="https://discord.gg/yVQ7ygZ35E">
+                discord.gg/yVQ7ygZ35E</a><br><br>
+                <img src="YouTube.png" alt="YouTube Icon" class="icon">
+                YouTube: <a href="http://youtube.com/@carloscristanchoclavijo">
+                @carloscristanchoclavijo</a><br><br>
+                <img src="Telegram.png" alt="Telegram Icon" class="icon">
+                Telegram: <a href="https://t.me/CodingCrewOfficial">
+                CodingCrewOfficial</a><br><br>
+            </p>
+        </section>
+
+<!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Legal<br><br></h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade<br><br></a></li>
+                        <li><a href="#">Termos de Serviço<br><br></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Carlos Cristancho. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        
+        <script src="typewriter.js"></script>
+        <script src="carousel-controls.js"></script>
+        <script src="languageRedirect.js"></script>
+
+    </body>
+</html>
