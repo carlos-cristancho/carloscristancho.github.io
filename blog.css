@@ -1,6 +1,6 @@
-/* Estilos generales y variables ======================================= */
+/* Variables ======================================= */
 :root {
-    --primary-bg: #f0f0f0; /* Fondo general */
+    --primary-bg: #fff; /* General background */
     --primary-text: #000;
     --secondary-text: #fff;
     --contact-bg: #c0202d;
@@ -14,25 +14,23 @@ body {
     color: var(--primary-text);
 }
 
-/* Encabezado superior ================================================ */
+/* Top header ================================================ */
 .top-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff;
+    padding: 30px 20px;
+    background-color: var(--primary-bg);
     border-bottom: 1px solid #ddd;
 }
 
-.logo-section img {
-    height: 50px; /* Ajusta el tamaño del logo */
-}
-
 .search-bar input {
-    width: 200px;
+    width: 750px;
+    height: 25px;
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    margin: 0 60px;
 }
 
 .contact-section a {
@@ -42,51 +40,69 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    margin: 15px 40px;
 }
 
 .contact-section a:hover {
     background-color: darkred;
 }
 
-/* Barra de navegación vertical izquierda ============================= */
+/* Left vertical navigation bar ============================= */
 .vertical-nav {
     position: fixed;
-    top: 60px; /* Ajustado después del encabezado */
+    top: 91px; /* Adjusted after the header */
     left: 0;
-    width: 200px;
+    width: 220px;
     height: calc(100% - 60px);
-    background-color: #333;
+    background-color: var(--primary-bg);
     color: var(--secondary-text);
-    padding-top: 20px;
+    padding-top: 30px;
+    border-right: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--primary-background);
+    height: 60px;
+    padding: 0 5px;
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+    margin: 40px 0 55px 0;
 }
 
 .nav-menu {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 10px 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    gap: 35px;
+    align-items: left;
 }
 
 .nav-menu li {
     color: var(--secondary-text);
     text-decoration: none;
     font-size: 1.1em;
-    text-align: center;
+    text-align: left;
 }
 
 .nav-menu li a:hover {
     text-decoration: underline;
 }
 
-/* Contenedor principal de contenido del blog ========================== */
+/* Main content container for the blog ========================== */
 .main-container {
-    margin-left: 220px; /* Deja espacio para la barra de navegación izquierda */
-    margin-right: 220px; /* Deja espacio para la barra de noticias */
-    padding: 20px;
-    background-color: #fff;
+    margin-left: 220px; /* Leaves space for the left navigation bar */
+    margin-right: 220px; /* Leaves space for the news bar */
+    padding: 0 20px;
+    background-color: var(--primary-bg);
 }
 
 .blog-content h1 {
@@ -94,16 +110,18 @@ body {
     margin-bottom: 20px;
 }
 
-/* Barra de noticias vertical derecha ================================== */
+/* Right vertical news bar ================================== */
 .news-section {
     position: fixed;
-    top: 60px;
+    top: 91px;
     right: 0;
-    width: 200px;
+    width: 275px;
     height: calc(100% - 60px);
-    background-color: var(--news-bg);
+    background-color: var(--primary-bg);
     padding-top: 20px;
-    overflow-y: auto; /* Permite desplazamiento si las noticias son muchas */
+    overflow-y: auto; /* Allows scrolling if there are many news items */
+    border-left: 1px solid #ddd;
+    margin-top: 10px;
 }
 
 .news-section h2 {
@@ -119,7 +137,7 @@ body {
 }
 
 .news-item img {
-    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    width: 100%; /* Image occupies the entire width of the card */
     border-radius: 5px;
 }
 
@@ -128,9 +146,9 @@ body {
     font-size: 1em;
 }
 
-/* Media Queries para pantallas pequeñas ============================== */
+/* Media Queries for small screens ============================== */
 @media (max-width: 768px) {
-    /* Encabezado superior en dispositivos móviles */
+    /* Top header on mobile devices */
     .top-header {
         flex-direction: column;
         align-items: center;
@@ -141,12 +159,12 @@ body {
         margin-bottom: 10px;
     }
 
-    /* Oculta las barras laterales en pantallas pequeñas */
+    /* Hides sidebars on small screens */
     .vertical-nav, .news-section {
         display: none;
     }
 
-    /* El contenido principal ocupa todo el ancho */
+    /* The main content occupies the full width */
     .main-container {
         margin: 0;
         padding: 10px;
