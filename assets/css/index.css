@@ -21,7 +21,7 @@
 
 /* Header styles ================================================ */
 header {
-    background: url("images/backgroundImageIndex.jpg") no-repeat center center;
+    background: url("../images/backgroundImageIndex.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh; /* This value adjusts according to the space you want to occupy. */
     position: relative;
