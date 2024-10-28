@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Checking if you are on the blog or portfolio page
-    let text;
-    if (window.location.href.includes('index.html')) {
-        // A line break is included in the text
-        text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
-    } else {
-        text = "WELCOME TO\n\nCARLOS CRISTANCHO'S BLOG";
-    }
 
+    let text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
     let index = 0;
     const typingSpeed = 100; // Adjust the typing speed
     const typingDiv = document.querySelector('.text-overlay h1');

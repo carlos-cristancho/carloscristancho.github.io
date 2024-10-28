@@ -9,117 +9,67 @@
         <link rel="stylesheet" href="blog.css">
     </head>
     <body>
-<!-- ===============================
-     Header and Navigation
-     =============================== -->
-        <header>
-            <nav class="nav-container">
-                <div class="logo-section">
-                    <!-- Logo added to the navigation panel -->
-                    <a href="#">
-                        <img src="logo.png" alt="Logo of Carlos Cristancho Portfolio" class="logo">
-                    </a>
-                </div>
-                <nav class="menu-section" aria-label="Main Navigation">
-                    <ul>
-                        <!-- Navigation menu -->
-                        <li>
-                            <div class="home-option">
-                                <a href="index.html#home" aria-label="Navigate to main page">
-                                Home</a></li>
-                            </div>
-                        <li><a href="#software" aria-label="Navigate to software development section">
-                            Software<br>Development</a></li>
-                        <li><a href="#ics" aria-label="Navigate to Instrumentation and Control Systems Maintenance section">
-                            Instrumentation and<br>Control Systems Maintenance</a></li>
-                        <li><a href="#procedures" aria-label="Navigate to Maintenance Procedures section">
-                            Maintenance<br>Procedures</a></li>
-                        <li>
-                            <div class="news-option">
-                                <a href="#news" aria-label="Navigate to news page">
-                                Newsletters</a></li>
-                            </div>
-                    </ul>
-                </nav>
-                <div class="contact-section">
-                    <!-- Contact -->
-                    <a href="#contact" class="contact-link" aria-label="Navigate to contact section">
-                        Contact</a>
-                </div>
-            </nav>
-            <div class="text-overlay">
-                <h1>WELCOME TO<br><br>CARLOS CRISTANCHO'S BLOG</h1>
+<!-- Header and Navigation =============================== -->
+        <header class="top-header">
+            <div class="logo-section">
+                <a href="index.html#">
+                    <img src="logo.png" alt="Logo of Carlos Cristancho Portfolio" class="logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="contact-section">
+                <!-- Contact -->
+                <a href="index.html#contact" class="contact-link" aria-label="Navigate to contact section">
+                    Contact</a>
             </div>
         </header>
-
-<!-- ===============================
-     Software Development Section
-     =============================== -->
-        <section id="software" class="container">
-            <h1>Software Development</h1>
-        </section>
-
-<!-- Divider with hr -->
-        <hr class="section-divider">
-
-<!-- ========================================================
-     Instrumentation and Control Systems Maintenance Section
-     ======================================================== -->
-        <section id="ics" class="container">
-            <h1>Instrumentation and<br>Control Systems Maintenance</h1>
-        </section>
-
-<!-- Divider with hr -->
-        <hr class="section-divider">
-
-<!-- ===============================
-     Maintenance Procedures Section
-     =============================== -->
-        <section id="procedures" class="container">
-            <h1>Maintenance Procedures</h1>
-        </section>
-
-<!-- Divider with hr -->
-        <hr class="section-divider">
-
-<!-- ===============================
-     Contact Section
-     =============================== -->
-        <section id="contact" class="container">
-            <h2>Contact<br><br></h2>
-            <p>If you have a project in mind, feel free to reach out!<br><br>
-                Email: <a href="mailto:ingenierocristanchoclavijo@gmail.com">
-                ingenierocristanchoclavijo@gmail.com</a><br><br>
-                LinkedIn: <a href="https://linkedin.com/in/carlos-cristancho">
-                carlos-cristancho</a><br><br>
-                GitHub: <a href="https://github.com/carlos-cristancho">
-                carlos-cristancho</a><br><br>
-                Discord: <a href="https://discord.gg/yVQ7ygZ35E">
-                discord.gg/yVQ7ygZ35E</a><br><br>
-                YouTube: <a href="http://youtube.com/@carloscristanchoclavijo">
-                @carloscristanchoclavijo</a><br><br>
-                Telegram: <a href="https://t.me/CodingCrewOfficial">
-                CodingCrewOfficial</a>
-            </p>
-        </section>
-
-<!-- ===============================
-     Footer Section
-     =============================== -->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h4>Legal<br><br></h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy<br><br></a></li>
-                        <li><a href="#">Terms of Service<br><br></a></li>
-                    </ul>
-                </div>
+<!-- Vertical navigation bar on the left side ============ -->
+        <nav class="vertical-nav">
+            <ul class="nav-menu">
+                <li>
+                    <a href="index.html#home" aria-label="Navigate to main page">
+                        Home</a>
+                </li>
+                <li>
+                    <a href="#software" aria-label="Navigate to software development section">
+                        Software<br>Development</a>
+                </li>
+                <li>
+                    <a href="#instrumentation-maintenance" aria-label="Navigate to Instrumentation Maintenance section">
+                        Instrumentation<br>Maintenance</a>
+                </li>
+                <li>
+                    <a href="#control-system-maintenance" aria-label="Navigate to Control Systems Maintenance section">
+                        Control<br>Systems<br>Maintenance</a>
+                </li>
+                <li>
+                    <a href="#procedures" aria-label="Navigate to Maintenance Procedures section">
+                        Maintenance<br>Procedures</a>
+                </li>
+            </ul>
+        </nav>
+<!-- Main container for central content ========================== -->
+        <main class="main-container">
+            <section class="blog-content">
+                <h1>Welcome to Carlos Cristancho's blog</h1>
+                <p>
+                    This is the central content of the blog
+                </p>
+            </section>
+        </main>
+<!-- Vertical navigation bar on the left side ====================== -->
+        <aside class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-item">
+                <img src="news-image1.jpg" alt="Image of news 1">
+                <p>News 1 Title</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Carlos Cristancho. All rights reserved.</p>
-            </div>
-        </footer>
-        <script src="typewriter.js"></script>        
+            <div class="news-item">
+                <img src="news-image2.jpg" alt="Image of news 2">
+                <p>News 2 Title</p>
+            </div>                
+        </aside>
     </body>
 </html>

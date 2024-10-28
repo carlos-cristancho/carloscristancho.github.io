@@ -1,346 +1,154 @@
-/* ===============================
-   Style variables
-   =============================== */
-   :root {
-    --primary-text: #000; /* Main text color */
-    --secundary-text: #fff; /* White color in RGB */
-    --primary-background: #fff;
-    --secundary-background: #333;
-    --link-text: #333; /* Link color */
-    --link-hover-color: #1d4ed8; /* Link color on hover */
-    --divider-color: #b8860b; /* Color for dividers */
-    --general-background: #f0f0f0; /* General site background */
-    --contact-background: #c0202d;
+/* Estilos generales y variables ======================================= */
+:root {
+    --primary-bg: #f0f0f0; /* Fondo general */
+    --primary-text: #000;
+    --secondary-text: #fff;
+    --contact-bg: #c0202d;
+    --news-bg: #e9e9e9;
 }
 
-/* ===============================
-   Header and Navigation
-   =============================== */
-
-/* Header styles */
-header {
-    background: url("backgroundImageBlog.png") no-repeat center center;
-    background-size: cover;
-    height: 100vh; /* This value adjusts according to the space you want to occupy. */
-    position: relative;
-    z-index: 1;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
-/* Navigation container */
-.nav-container {
-    align-items: center;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Logo container */
-.logo-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--primary-background);
-    height: 60px;
-}
-
-.logo {
-    height: 200px;
-    width: auto;
-    margin: 40px 20px 0 10px; /* First parameter move the logo to the bottom */
-}
-
-/* Menu container */
-.menu-section {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary-background);
-    align-items: center;
-    text-align: center;
-}
-
-.menu-section ul {
-    list-style-type: none;
-    display: flex;
-    gap: 50px;
-    margin: -35px 0 20px; /* First parameter move the menu to the bottom */
-}
-
-.home-option {
-    margin-top: 10px;
-}
-
-.news-option {
-    margin-top: 10px;
-}
-
-.menu-section ul li a {
-    color: var(--link-text);
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-.menu-section ul li a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
-/* Contact container */
-.contact-section {
-    flex: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--contact-background);
-    height: 87px;
-    padding: 0 5px;
-    margin: -87px 0 -50px 1100px;
-}
-
-.contact-link {
-    color: var(--secundary-text);
-    padding: 15px 40px;
-    text-decoration: none;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px; /* Move the contact word to the bottom */
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-/* ===============================
-   Welcome Section
-   =============================== */
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 3;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.text-overlay h1 {
-    font-family: Arial, sans-serif;
-    font-size: 3em;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.text-overlay h1::after {
-    content: '|';
-    display: inline-block;
-    margin-left: 5px;
-    font-weight: normal;
-    animation: blink 1s step-start infinite;
-    font-size: 1.2em; /* Adjust the cursor size */
-    line-height: 1.2; /* Adjust the cursor height */
-    vertical-align: bottom;
-}  
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* ===============================
-   Global Styles
-   =============================== */
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px; /* Adjust this value according to the header size */
-}
-
-/* ===============================
-   Body Styles
-   =============================== */
-
-/* Background */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
     color: var(--primary-text);
-    background-color: var(--general-background); /* General site background */
 }
 
-/* ===============================
-   Software Development Section
-   =============================== */
-.software-text{
-    text-align: justify;
-    margin-bottom: 15px;
+/* Encabezado superior ================================================ */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
 }
 
-#software h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+.logo-section img {
+    height: 50px; /* Ajusta el tamaño del logo */
 }
 
-#software p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
+.search-bar input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* ===============================
-   Projects Section
-   =============================== */
-#projects h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+.contact-section a {
+    color: var(--secondary-text);
+    background-color: var(--contact-bg);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-#projects p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
+.contact-section a:hover {
+    background-color: darkred;
 }
 
-/* ===============================
-   About Section
-   =============================== */
+/* Barra de navegación vertical izquierda ============================= */
+.vertical-nav {
+    position: fixed;
+    top: 60px; /* Ajustado después del encabezado */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: #333;
+    color: var(--secondary-text);
+    padding-top: 20px;
+}
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-menu li {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.nav-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal de contenido del blog ========================== */
+.main-container {
+    margin-left: 220px; /* Deja espacio para la barra de navegación izquierda */
+    margin-right: 220px; /* Deja espacio para la barra de noticias */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.blog-content h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#about {
-    padding: 60px 20px;
-    background-color: rgba(white, 0.9); /* White background with a bit of transparency */
+/* Barra de noticias vertical derecha ================================== */
+.news-section {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: var(--news-bg);
+    padding-top: 20px;
+    overflow-y: auto; /* Permite desplazamiento si las noticias son muchas */
+}
+
+.news-section h2 {
+    font-size: 1.5em;
+    padding: 10px;
     text-align: center;
-    border-radius: 10px; /* Add a rounded border */
 }
 
-#about h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-#about p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-/* ===============================
-   Contact Section
-   =============================== */
-#contact h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-/* ===============================
-   Section Styles
-   =============================== */
-/* Main Container Style */
-.container {
-    background: rgba(black, 0.7); /* Container background */
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 50px auto -50px;
+.news-item {
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(black, 0.1);
+    margin-bottom: 10px;
 }
 
-/* ===============================
-   Divider Styles
-   =============================== */
-
-/* Section divider */
-.section-divider {
-    background-color: var(--divider-color);
-    height: 4px;
-    width: 80%;
-    margin: 20px auto;
-    border-radius: 2px;
+.news-item img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    border-radius: 5px;
 }
 
-/* ===============================
-   Footer Section
-   =============================== */
-footer {
-    background-color: var(--secundary-background);
-    color: var(--secundary-text);
-    padding: 10px 0;
-    text-align: left;
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
+.news-item p {
+    margin-top: 8px;
+    font-size: 1em;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* Media Queries para pantallas pequeñas ============================== */
+@media (max-width: 768px) {
+    /* Encabezado superior en dispositivos móviles */
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer-section h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-.footer-section ul {
-    font-size: 1.1em;
-    list-style-type: none;
-    padding: 0;
-}
+    /* Oculta las barras laterales en pantallas pequeñas */
+    .vertical-nav, .news-section {
+        display: none;
+    }
 
-.footer-section ul li {
-    margin: 8px 0;
-}
-
-.footer-bottom {
-    padding: 10px 0;
-    margin: 0 10px;
-    font-size: 14px;
-}
-
-@media screen and (max-width: 768px) {
-    .footer-section {
-        flex-basis: 100%;
+    /* El contenido principal ocupa todo el ancho */
+    .main-container {
+        margin: 0;
+        padding: 10px;
     }
 }

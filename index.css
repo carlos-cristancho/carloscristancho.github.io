@@ -51,7 +51,7 @@ header::before {
 
 @media (max-width: 768px) {
     .nav-container {
-        position: static; /* Cambia de fijo a estático en pantallas pequeñas */
+        position: static; /* Change from fixed to static on small screens */
     }
 }
 
@@ -403,7 +403,6 @@ body {
     background-color: #555;
 }
 
-
 /* About Section ================================================ */
 .profile-pic {
     width: 150px;
@@ -519,59 +518,59 @@ footer {
 
 /* Mobile Optimization (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Ajuste del Header */
+    /* Header adjustment */
     header {
-        height: 50vh; /* Reduce el tamaño del header en dispositivos móviles */
+        height: 50vh; /* Reduce the header size on mobile devices */
     }
     
-    /* Ajuste del logo */
+    /* Logo adjustment */
     .logo {
-        height: 100px; /* Reduce el tamaño del logo en móviles */
-        margin: 10px auto; /* Centra el logo */
+        height: 100px; /* Reduce the logo size on mobile devices */
+        margin: 10px auto; /* Center the logo */
     }
 
-    /* Ajuste de la barra de navegación */
+    /* Navigation bar adjustment */
     .menu-section ul {
-        flex-direction: column; /* Coloca los elementos de la barra en una columna */
-        gap: 20px; /* Espacio entre elementos */
-        margin: 0; /* Ajusta el margen para centrar la barra */
+        flex-direction: column; /* Place the navigation bar elements in a column */
+        gap: 20px; /* Space between elements */
+        margin: 0; /* Adjust the margin to center the bar */
     }
 
-    /* Contenedor de proyectos */
+    /* Project container */
     .projects-container {
-        overflow-x: auto; /* Mantiene el desplazamiento horizontal en móviles */
-        padding: 0 10px; /* Añade algo de padding para evitar recortes en los bordes */
+        overflow-x: auto; /* Keep horizontal scrolling on mobile devices */
+        padding: 0 10px; /* Add some padding to avoid edge clipping */
     }
 
-    /* Ajuste en las tarjetas de proyecto */
+    /* Adjustment in project cards */
     .project-card {
-        min-width: 90%; /* Ocupa casi toda la pantalla en móviles */
+        min-width: 90%; /* Occupy almost the entire screen on mobile devices */
         max-width: 90%;
-        margin: 10px auto; /* Centra las tarjetas */
+        margin: 10px auto; /* Center the cards */
     }
 
-    /* Sección de bienvenida */
+    /* Welcome section */
     .text-overlay h1 {
-        font-size: 1.5em; /* Reduce el tamaño del texto de bienvenida en móviles */
+        font-size: 1.5em; /* Reduce the welcome text size on mobile devices */
     }
 
-    /* Contenedor de contacto */
+    /* Contact container */
     .contact-section {
         height: auto;
         margin: 0;
-        padding: 10px; /* Ajuste de padding para centrado */
+        padding: 10px; /* Padding adjustment for centering */
         text-align: center;
     }
 
     .contact-link {
-        padding: 10px 20px; /* Ajusta el espacio para mejor apariencia en móviles */
+        padding: 10px 20px; /* Adjust the spacing for better appearance on mobile devices */
         font-size: 1em;
     }
 
-    /* Ajustes en las tarjetas */
+    /* Adjustments to the cards */
     .home-text {
-        gap: 5px; /* Menor separación entre tarjetas */
-        flex-direction: column; /* Apila las tarjetas verticalmente */
+        gap: 5px; /* Less spacing between cards */
+        flex-direction: column; /* Stack the cards vertically */
     }
 
     .card {
@@ -580,9 +579,9 @@ footer {
         margin: 10px 0;
     }
 
-    /* Ajuste del contenedor general */
+    /* General container adjustment */
     .container {
         max-width: 90%;
-        margin: 10px auto; /* Ajusta para centrar en móviles */
+        margin: 10px auto; /* Adjust to center on mobile devices */
     }
 }
