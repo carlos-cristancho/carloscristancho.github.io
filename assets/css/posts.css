@@ -1,0 +1,107 @@
+/* Style variables ================================================ */
+:root {
+    --primary-text: #000; /* Main text color */
+    --secundary-text: #fff; /* White color in RGB */
+    --primary-background: #fff;
+    --secundary-background: #333;
+    --link-text: #333; /* Link color */
+    --link-hover-color: #1d4ed8; /* Link color on hover */
+    --divider-color: #b8860b; /* Color for dividers */
+    --general-background: #f0f0f0; /* General site background */
+    --contact-background: #c0202d;
+    --blue-card: #d9edf8; /* Background card */
+    --blue-button: #201c65; /* Background button */
+    --green-card: #ccf9d5; /* Background card */
+    --green-button: #18a46f; /* Background button */
+    --violet-card: #fbecf9; /* Background card */
+    --violet-button: #aa1994; /* Background button */
+    --red-card: #fef1f0; /* Background card */
+    --red-button: #f55700; /* Background button */
+}
+
+/* Navigation container ================================================ */
+.nav-container {
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: static; /* Change from fixed to static on small screens */
+    }
+}
+
+/* Logo container ================================================ */
+.logo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--primary-background);
+    height: 60px;
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+    margin: 22px 20px 0 10px;
+}
+
+/* Menu container ================================================ */
+.menu-section {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-background);
+    align-items: center;
+}
+
+.menu-section ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    margin: -50px 0 20px;
+    text-align: center;
+}
+
+.menu-section ul li a {
+    color: var(--link-text);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.menu-section ul li a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Contact container ================================================ */
+.contact-section {
+    flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--contact-background);
+    height: 75px;
+    padding: 0 5px;
+    margin: -75px 0 -50px 1100px;
+}
+
+.contact-link {
+    color: var(--secundary-text);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Move the contact word to the bottom */
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
