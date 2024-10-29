@@ -19,9 +19,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 20px;
+    padding: 30px 150px;
     background-color: var(--primary-bg);
     border-bottom: 1px solid #ddd;
+    top: 0;
+    position: fixed;
 }
 
 .search-bar input {
@@ -30,7 +32,7 @@ body {
     padding: 5px;
     border: 3px solid #ccc;
     border-radius: 10px;
-    margin: 0 60px;
+    margin: 0;
 }
 
 .contact-section a {
@@ -40,7 +42,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin: 15px 40px;
+    margin: 15px 60px;
 }
 
 .contact-section a:hover {
@@ -82,7 +84,7 @@ body {
     margin: 10px 0 10px 15px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 25px;
     align-items: left;
 }
 
@@ -99,19 +101,21 @@ body {
 
 /* Main content container for the blog ========================== */
 .main-container {
-    margin-left: 220px; /* Leaves space for the left navigation bar */
+    margin: 70px 220px; /* Leaves space for the left and right navigation bar */
+    /*margin-top: 70px;
+    margin-left: 220px; 
     margin-right: 220px; /* Leaves space for the news bar */
-    padding: 0 20px;
+    padding: 20px 20px;
     background-color: var(--primary-bg);
 }
 
-/* Estilos para el enlace de vista previa del artículo */
+/* Styles for the article preview link */
 .fftwcpp-preview {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 20px 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -133,6 +137,7 @@ body {
 .fftwcpp-cover-image {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .fftwcpp-preview h2 {
@@ -150,18 +155,18 @@ body {
 /* Right vertical news bar ================================== */
 .news-section {
     position: fixed;
-    top: 91px;
+    top: 101px;
     right: 0;
     width: 275px;
     height: calc(100% - 60px);
     background-color: var(--primary-bg);
-    padding-top: 20px;
+    padding-top: 0;
     overflow-y: auto; /* Allows scrolling if there are many news items */
     border-left: 1px solid #ddd;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
-.news-section h2 {
+.news-section h2 {    
     font-size: 1.5em;
     padding: 10px;
     text-align: center;
@@ -181,6 +186,7 @@ body {
 .news-item p {
     margin-top: 8px;
     font-size: 1em;
+    text-align: left;
 }
 
 /* Media Queries for small screens ============================== */
