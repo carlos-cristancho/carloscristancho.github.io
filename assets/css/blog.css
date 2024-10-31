@@ -1,102 +1,128 @@
 /* Variables ======================================= */
 :root {
-    --primary-bg: #fff; /* General background */
+    --primary-background: #fff; /* General background */
     --primary-text: #000;
-    --secondary-text: #fff;
-    --contact-bg: #c0202d;
-    --news-bg: #e9e9e9;
+    --secundary-text: #fff;
+    --contact-background: #c0202d;
+    --border-color: #ddd;
+    --link-text: #333; /* Link color */
+    --link-hover-color: #1d4ed8; /* Link color on hover */
 }
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--primary-bg);
+    background-color: var(--primary-background);
     color: var(--primary-text);
 }
-
-/* Top header ================================================ */
+/* Top header ======= */
 .top-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 150px;
-    background-color: var(--primary-bg);
-    border-bottom: 1px solid #ddd;
-    top: 0;
-    position: fixed;
+    justify-content: center;
+    align-items: center;    
+    border: 1px solid red;
+    height: 80px;
 }
-
+/* > Logo container ============================ */
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 80px;
+    border: 1px solid black;
+}
+/* >-> Logo ================================================== */
+.logo {
+    height: 200px;
+    width: 188px;
+    transform: translateY(6px);
+    border: 1px solid blue;
+}
+/* > Search bar =========================== */
+.search-bar {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellow;
+}
+/* >-> Search bar input =============================== */
 .search-bar input {
     width: 750px;
     height: 25px;
-    padding: 5px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    margin: 0;
+    border: 1px solid blue;
 }
-
-.contact-section a {
-    color: var(--secondary-text);
-    background-color: var(--contact-bg);
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 15px 60px;
-}
-
-.contact-section a:hover {
-    background-color: darkred;
-}
-
-/* Left vertical navigation bar ============================= */
-.vertical-nav {
-    position: fixed;
-    top: 91px; /* Adjusted after the header */
-    left: 0;
-    width: 220px;
-    height: calc(100% - 60px);
-    background-color: var(--primary-bg);
-    color: var(--secondary-text);
-    padding-top: 30px;
-    border-right: 1px solid #ddd;
-    margin-top: 10px;
-}
-
-.logo-section {
+/* > Contact section ======================= */
+.contact-section {
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
+    border: 1px solid green;
+    background-color: var(--contact-background);
+    height: 80px;
+}
+/* >-> Contact section ============================ */
+.contact-link {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: var(--secundary-text);
+}
+.contact-link:hover {
+    text-decoration: underline;
+}
+/* Left vertical navigation bar === */
+.vertical-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 81px; /* Adjusted after the header */
+    width: 180px;
+    /*height: calc(100% - 80px);*/
     background-color: var(--primary-background);
-    height: 60px;
-    padding: 0 5px;
+    /*color: var(--secundary-text);*/
+    /*padding-top: 30px;*/
+    border-right: 1px solid var(--border-color);
+    /*margin-top: 10px;*/
+    border: 1px solid violet;
 }
-
-.logo {
-    height: 200px;
-    width: auto;
-    margin: 40px 0 55px 0;
-}
-
+/* > Nav menu =========================================== */
 .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 10px 15px;
+    /*flex: 1;*/
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    align-items: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    /*padding: 0;
+    margin: 10px 0 10px 15px;*/
+    gap: 35px;
+    border: 1px solid red;
 }
-
+/* >-> li =============================================================== */
 .nav-menu li {
-    color: var(--secondary-text);
+    /*flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;*/
+    border: 1px solid red;
+}
+/* >->-> li a ===================================================================== */
+.nav-menu li a {
+    /*flex: 1;*/
+    color: var(--link-text);
     text-decoration: none;
     font-size: 1.1em;
     text-align: left;
+    border: 1px solid green;
 }
-
+/* >->-> li a ========================================================================= */
 .nav-menu li a:hover {
     text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
 /* Main content container for the blog ========================== */
@@ -162,10 +188,10 @@ html {
     right: 0;
     width: 275px;
     height: calc(100% - 60px);
-    background-color: var(--primary-bg);
+    background-color: var(--primary-background);
     padding-top: 0;
     overflow-y: auto; /* Allows scrolling if there are many news items */
-    border-left: 1px solid #ddd;
+    border-left: 1px solid var(--border-color);
     margin-top: 0;
 }
 
