@@ -18,7 +18,6 @@
     --red-card: #fef1f0; /* Background card */
     --red-button: #f55700; /* Background button */
 }
-
 /* Header styles ================================================ */
 header {
     background: url("../images/backgroundImageIndex.jpg") no-repeat center center;
@@ -27,7 +26,6 @@ header {
     position: relative;
     z-index: 1;
 }
-
 header::before {
     content: "";
     position: absolute;
@@ -38,93 +36,82 @@ header::before {
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
 }
-
-/* Navigation container ================================================ */
+/* > Nav container =================== */
 .nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 60px;
-    position: fixed;
+    height: 80px;
     top: 0;
     width: 100%;
     z-index: 1000;
+    position: fixed;
+    background-color: var(--primary-background);
 }
-
-@media (max-width: 768px) {
-    .nav-container {
-        position: static; /* Change from fixed to static on small screens */
-    }
-}
-
-/* Logo container ================================================ */
+/* >-> Logo container ============================ */
 .logo-section {
     flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    background-color: var(--primary-background);
-    height: 60px;
+    width: 240px;
+    height: 80px;
 }
-
+/* >->-> Logo ================================================== */
 .logo {
     height: 200px;
-    width: auto;
-    margin: 22px 20px 0 10px; /* First parameter move the logo to the bottom */
+    width: 188px;
+    transform: translateY(6px);
 }
-
-/* Menu container ================================================ */
+/* >-> Menu section ============================= */
 .menu-section {
-    flex: 2;
+    flex: 6;
     display: flex;
     justify-content: center;
-    background-color: var(--primary-background);
+    height: 80px;
+}
+/* >->-> ul ======================================================== */
+.menu-section ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.menu-section ul {
+/* >->->-> ul li =================================================================== */
+.menu-section ul li {
+    flex: 1;
     list-style-type: none;
-    display: flex;
-    gap: 75px;
-    margin: -35px 0 20px; /* First parameter move the menu to the bottom */
+    text-align: center;
 }
-
+/* >->->->-> ul li a =========================================================================== */
 .menu-section ul li a {
-    color: var(--link-text);
     text-decoration: none;
     font-size: 1.1em;
+    color: var(--link-text);
 }
-
 .menu-section ul li a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
 }
-
-/* Contact container ================================================ */
+/* >-> Contact section ============================= */
 .contact-section {
-    flex: 0;
+    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: var(--contact-background);
-    height: 75px;
-    padding: 0 5px;
-    margin: -75px 0 -50px 1100px;
+    height: 80px;
 }
-
+/* >->-> Contact link ========================================== */
 .contact-link {
-    color: var(--secundary-text);
-    padding: 15px 40px;
-    text-decoration: none;
     font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px; /* Move the contact word to the bottom */
+    text-decoration: none;
+    color: var(--secundary-text);
 }
-
 .contact-link:hover {
     text-decoration: underline;
 }
-
 /* Welcome Section ================================================ */
 .text-overlay {
     position: absolute;
