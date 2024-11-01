@@ -2,12 +2,11 @@
 :root {
     --primary-text: #000; /* Main text color */
     --secundary-text: #fff; /* White color in RGB */
-    --primary-background: #fff;
+    --primary-background: #f0f0f0;
     --secundary-background: #333;
     --link-text: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
     --divider-color: #b8860b; /* Color for dividers */
-    --general-background: #f0f0f0; /* General site background */
     --contact-background: #c0202d;
     --blue-card: #d9edf8; /* Background card */
     --blue-button: #201c65; /* Background button */
@@ -18,6 +17,15 @@
     --red-card: #fef1f0; /* Background card */
     --red-button: #f55700; /* Background button */
 }
+
+/* Body Styles ================================================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--primary-text);
+    background-color: var(--primary-background); /* General site background */
+}
+
 /* Header styles ================================================ */
 header {
     background: url("../images/backgroundImageIndex.jpg") no-repeat center center;
@@ -36,6 +44,7 @@ header::before {
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
 }
+
 /* > Nav container =================== */
 .nav-container {
     flex: 1;
@@ -154,14 +163,6 @@ header::before {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px; /* Adjust this value according to the header size */
-}
-
-/* Body Styles ================================================ */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--primary-text);
-    background-color: var(--general-background); /* General site background */
 }
 
 /* Home Section ================================================ */
