@@ -3,12 +3,14 @@
     --primary-background: #fff; /* General background */
     --primary-text: #000;
     --secundary-text: #fff;
+    --description-text: #555;
+    --link-text: #333; /* Link color */
+    --link-hover-color: #1d4ed8; /* Link color on hover */    
     --contact-background: #c0202d;
     --border-color: #ddd;
-    --link-text: #333; /* Link color */
-    --link-hover-color: #1d4ed8; /* Link color on hover */
 }
 body {
+    display: flex;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--primary-background);
@@ -18,9 +20,14 @@ body {
 .top-header {
     display: flex;
     justify-content: center;
-    align-items: center;    
-    border: 1px solid red;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
     height: 80px;
+    z-index: 1000;
+    background-color: var(--primary-background);
+    border-bottom: 1px solid var(--border-color);
 }
 /* > Logo container ============================ */
 .logo-section {
@@ -30,14 +37,12 @@ body {
     align-items: center;
     width: 240px;
     height: 80px;
-    border: 1px solid black;
 }
 /* >-> Logo ================================================== */
 .logo {
     height: 200px;
     width: 188px;
     transform: translateY(6px);
-    border: 1px solid blue;
 }
 /* > Search bar =========================== */
 .search-bar {
@@ -45,13 +50,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellow;
 }
 /* >-> Search bar input =============================== */
 .search-bar input {
     width: 750px;
     height: 25px;
-    border: 1px solid blue;
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
 }
 /* > Contact section ======================= */
 .contact-section {
@@ -59,7 +64,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
     background-color: var(--contact-background);
     height: 80px;
 }
@@ -75,49 +79,38 @@ body {
 /* Left vertical navigation bar === */
 .vertical-nav {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 81px; /* Adjusted after the header */
     width: 180px;
-    /*height: calc(100% - 80px);*/
+    height: calc(100% - 80px);
     background-color: var(--primary-background);
-    /*color: var(--secundary-text);*/
-    /*padding-top: 30px;*/
     border-right: 1px solid var(--border-color);
-    /*margin-top: 10px;*/
-    border: 1px solid violet;
 }
 /* > Nav menu =========================================== */
 .nav-menu {
-    /*flex: 1;*/
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     list-style: none;
-    /*padding: 0;
-    margin: 10px 0 10px 15px;*/
     gap: 35px;
-    border: 1px solid red;
 }
 /* >-> li =============================================================== */
 .nav-menu li {
-    /*flex: 1;
+    flex: 1;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;*/
-    border: 1px solid red;
+    justify-content: flex-start;
+    align-items: center;
 }
 /* >->-> li a ===================================================================== */
 .nav-menu li a {
-    /*flex: 1;*/
     color: var(--link-text);
     text-decoration: none;
     font-size: 1.1em;
     text-align: left;
-    border: 1px solid green;
 }
 /* >->-> li a ========================================================================= */
 .nav-menu li a:hover {
@@ -130,14 +123,14 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px; /* This value adjusts according to the height of the fixed header */
 }
-
 .main-container {
-    margin: 70px 220px; /* Leaves space for the left and right navigation bar with 220px */
+    margin-top: 60px;
+    margin-right: 220px; /* Leaves space for the right navigation bar with 220px */
+    margin-left: 200px; /* Leaves space for the left navigation bar with 220px */
     padding: 20px 20px;
-    background-color: var(--primary-bg);
+    /*border: 1px solid red;*/
 }
-
-/* Styles for the article preview link */
+/* > Styles for the article preview link ===== */
 .blog-preview {
     display: flex;
     flex-direction: column;
@@ -151,67 +144,64 @@ html {
     transition: transform 0.2s ease;
     text-align: center;
 }
-
 .blog-preview:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
-
+/* >-> Blog link ========================================================= */
 .blog-link {
     text-decoration: none;
     color: inherit;
 }
-
-.blog-cover-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.blog-link:hover {
+    text-decoration: underline;
 }
-
 .blog-preview h2 {
     font-size: 1.5em;
     margin: 10px 0;
     padding: 0 10px;
 }
-
+/* >-> Blog cover image ================================================== */
+.blog-cover-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* >-> Blog preview p ==================================================== */
 .blog-preview p {
     font-size: 1em;
     padding: 0 10px 10px;
-    color: #555;
+    color: var(--description-text);
     text-align: justify;
 }
 
-/* Right vertical news bar ================================== */
+/* Right vertical news bar ==== */
 .news-section {
     position: fixed;
-    top: 101px;
+    top: 81px;
     right: 0;
     width: 275px;
     height: calc(100% - 60px);
-    background-color: var(--primary-background);
-    padding-top: 0;
     overflow-y: auto; /* Allows scrolling if there are many news items */
     border-left: 1px solid var(--border-color);
-    margin-top: 0;
 }
-
 .news-section h2 {    
     font-size: 1.5em;
     padding: 10px;
     text-align: center;
 }
-
+/* > News item =================== */
 .news-item {
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
 }
-
+/* >-> News item image ========================== */
 .news-item img {
     width: 100%; /* Image occupies the entire width of the card */
     border-radius: 5px;
 }
-
+/* >-> News item p =============================== */
 .news-item p {
     margin-top: 8px;
     font-size: 1em;
