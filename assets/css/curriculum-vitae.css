@@ -110,6 +110,49 @@ header {
 .contact-link:hover {
     text-decoration: underline;
 }
-.article-container{
-    margin-top: 80px;
+/* Left vertical navigation bar === */
+.vertical-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 81px; /* Adjusted after the header */
+    width: 180px;
+    height: calc(100% - 80px);
+    background-color: var(--primary-background);
+    border-right: 1px solid var(--border-color);
+}
+/* > Nav menu =========================================== */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    gap: 35px;
+}
+/* >-> ul =============================================================== */
+.nav-menu ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* >-> ul li =============================================================== */
+.nav-menu ul li {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* >->-> ul li a ===================================================================== */
+.link-cv {
+    color: var(--link-text);
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: left;
+}
+.link-cv:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
 }

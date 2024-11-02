@@ -2,7 +2,7 @@
 :root {
     --primary-background: #fff; /* General background */
     --primary-text: #000;
-    --secundary-text: #fff;
+    --secondary-text: #fff;
     --description-text: #555;
     --link-text: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */    
@@ -71,7 +71,7 @@ body {
 .contact-link {
     font-size: 1.1em;
     text-decoration: none;
-    color: var(--secundary-text);
+    color: var(--secondary-text);
 }
 .contact-link:hover {
     text-decoration: underline;
@@ -96,7 +96,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     list-style: none;
-    gap: 35px;
+    gap: 25px;
 }
 /* >-> li =============================================================== */
 .nav-menu li {

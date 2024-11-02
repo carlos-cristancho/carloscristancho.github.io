@@ -1,9 +1,9 @@
 /* Style variables ================================================ */
 :root {
     --primary-text: #000; /* Main text color */
-    --secundary-text: #fff; /* White color in RGB */
+    --secondary-text: #fff; /* White color in RGB */
     --primary-background: #f0f0f0;
-    --secundary-background: #333;
+    --secondary-background: #333;
     --link-text: #333; /* Link color */
     --link-hover-color: #1d4ed8; /* Link color on hover */
     --divider-color: #b8860b; /* Color for dividers */
@@ -116,7 +116,7 @@ header::before {
 .contact-link {
     font-size: 1.1em;
     text-decoration: none;
-    color: var(--secundary-text);
+    color: var(--secondary-text);
 }
 .contact-link:hover {
     text-decoration: underline;
@@ -463,8 +463,8 @@ html {
 
 /* Footer Section ================================================ */
 footer {
-    background-color: var(--secundary-background);
-    color: var(--secundary-text);
+    background-color: var(--secondary-background);
+    color: var(--secondary-text);
     padding: 10px 0;
     text-align: left;
     font-family: Arial, sans-serif;
