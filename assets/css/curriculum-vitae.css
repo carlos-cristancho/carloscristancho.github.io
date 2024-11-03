@@ -29,7 +29,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 /* > Nav container =================== */
@@ -179,7 +178,6 @@ html {
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
-    text-align: center;
     background-color: #f5f5f5;    
 }
 .cv-preview:hover {
@@ -198,6 +196,8 @@ html {
     font-size: 1.5em;
     margin: 10px 0;
     padding: 0 10px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 /* >-> Blog cover image ================================================== */
 .blog-cover-image {
@@ -226,18 +226,18 @@ html {
     padding: 10px;
     text-align: center;
 }
-/* > News item =================== */
+/* > Personal information item =================== */
 .personal-information-item {
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
 }
-/* >-> News item image ========================== */
+/* >-> Personal information item image ========================== */
 .personal-information-item img {
     width: 100%; /* Image occupies the entire width of the card */
     border-radius: 5px;
 }
-/* >-> News item p =============================== */
+/* >-> Personal information item p =============================== */
 .personal-information-item p {
     margin-top: 8px;
     font-size: 1em;
