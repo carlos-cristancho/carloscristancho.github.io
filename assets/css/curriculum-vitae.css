@@ -156,3 +156,100 @@ header {
     text-decoration: underline;
     color: var(--link-hover-color);
 }
+/* Main content container for the curriculum vitae ========================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* This value adjusts according to the height of the fixed header */
+}
+.main-container {
+    margin-top: 60px;
+    margin-right: 220px; /* Leaves space for the right navigation bar with 220px */
+    margin-left: 200px; /* Leaves space for the left navigation bar with 220px */
+    padding: 20px 20px;
+}
+/* > Styles for the curriculum vitae preview link ===== */
+.cv-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+    background-color: #f5f5f5;    
+}
+.cv-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* >-> Blog link ========================================================= */
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+}
+.blog-link:hover {
+    text-decoration: underline;
+}
+.cv-preview h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+/* >-> Blog cover image ================================================== */
+.blog-cover-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* >-> Curriculum vitae preview p ==================================================== */
+.cv-preview p {
+    font-size: 1em;
+    padding: 0 10px 10px;
+    color: var(--description-text);
+    text-align: justify;
+}
+/* ============================= RIGHT VERTICAL CURRICULUM VITAE BAR ==================================== */
+.personal-information-section {
+    position: fixed;
+    top: 81px;
+    right: 0;
+    width: 275px;
+    height: calc(100% - 60px);
+    overflow-y: auto; /* Allows scrolling if there are many news items */
+}
+.personal-information-section h2 {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+}
+/* > News item =================== */
+.personal-information-item {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* >-> News item image ========================== */
+.personal-information-item img {
+    width: 100%; /* Image occupies the entire width of the card */
+    border-radius: 5px;
+}
+/* >-> News item p =============================== */
+.personal-information-item p {
+    margin-top: 8px;
+    font-size: 1em;
+    text-align: center;
+}
+.personal-information-link {
+    color: var(--link-text);
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: left;
+}
+.personal-information-link:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
