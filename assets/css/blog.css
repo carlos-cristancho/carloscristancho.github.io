@@ -75,7 +75,7 @@ body {
 .contact-link:hover {
     text-decoration: underline;
 }
-/* Left vertical navigation bar === */
+/* ========================= LEFT VERTICAL NAVIGATION BAR ============================================ */
 .vertical-nav {
     display: flex;
     justify-content: flex-start;
@@ -117,7 +117,7 @@ body {
     color: var(--link-hover-color);
 }
 
-/* Main content container for the blog ========================== */
+/* ============================ MAIN CONTENT CONTAINER FOR THE BLOG ===================================== */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px; /* This value adjusts according to the height of the fixed header */
@@ -127,7 +127,6 @@ html {
     margin-right: 220px; /* Leaves space for the right navigation bar with 220px */
     margin-left: 200px; /* Leaves space for the left navigation bar with 220px */
     padding: 20px 20px;
-    /*border: 1px solid red;*/
 }
 /* > Styles for the article preview link ===== */
 .blog-preview {

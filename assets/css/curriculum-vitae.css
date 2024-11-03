@@ -132,11 +132,11 @@ header {
     gap: 35px;
 }
 /* >-> ul =============================================================== */
-.nav-menu ul {
+/*.nav-menu ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
+}*/
 /* >-> ul li =============================================================== */
 .nav-menu ul li {
     flex: 1;

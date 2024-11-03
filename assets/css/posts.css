@@ -29,7 +29,66 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    background: url("../../assets/images/fftw-cpp-images/coverFFTWCpp.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* This value adjusts according to the space you want to occupy. */
+    position: relative;
+    margin-left: 180px;
+    /*z-index: 1;*/
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 90;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+}
+/* Title Section ================================================ 
+.cover-image-container {
+    z-index: 3;
+}*/
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    font-size: 1em;
+    font-weight: bold;
+}
+.text-overlay h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+.text-overlay h1::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: normal;
+    animation: blink 1s step-start infinite;
+    font-size: 1.2em; /* Adjust the cursor size */
+    line-height: 1; /* Adjust the cursor height */
+    vertical-align: bottom;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* > Nav container =================== */
@@ -39,10 +98,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 80px;
-    top: 0;
-    width: 100%;
     z-index: 1000;
-    position: fixed;
     background-color: var(--primary-background);
 }
 /* >-> Logo container ============================ */
@@ -110,6 +166,94 @@ header {
 .contact-link:hover {
     text-decoration: underline;
 }
+/* ========================= LEFT VERTICAL NAVIGATION BAR ============================================ */
+.vertical-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 81px; /* Adjusted after the header */
+    width: 180px;
+    height: calc(100% - 80px);
+    background-color: var(--primary-background);
+    border-right: 1px solid var(--border-color);
+    z-index: 40;
+}
+/* > Nav menu =========================================== */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    gap: 15px;
+}
+/* >-> li =============================================================== */
+.nav-menu ul li {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* >->-> li a ===================================================================== */
+.posts-link {
+    color: var(--link-text);
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: left;
+}
+/* >->-> li a ========================================================================= */
+.posts-link:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+/* ============================ MAIN CONTENT CONTAINER FOR THE POSTS ===================================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* This value adjusts according to the height of the fixed header */
+}
+.author p {
+    font-size: 0.75em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    margin: 3px 180px 0 180px;
+}
 .article-container{
-    margin-top: 80px;
+    margin: 0 10px 0 180px; /* Leaves space for the left navigation bar with 180px */
+    padding: 0 10px;
+    border: 1px solid red;
+}
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+}
+.article-content h2 {
+    flex: 1;
+    font-size: 1.2em;
+    border: 1pt solid green;
+    text-align: center;
+}
+.article-content p {
+    flex: 5;
+    font-size: 1em;
+    margin: 0;
+    padding: 0 10px 10px;
+    color: var(--description-text);
+    text-align: justify;
+    border: 1px solid yellow;
+}
+.article-image {
+    flex: 1;
+    border: 1px solid red;
+}
+.image-caption p {
+    font-size: 0.75em;
+    font-style: italic;
+    text-align: center;
+    margin: 0 180px 0 180px;
+    border: 2px solid blue;
 }

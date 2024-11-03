@@ -12,71 +12,310 @@
     <body>
 <!-- Header and Navigation -->
         <header>
-            <nav class="nav-container">
-                <div class="logo-section">
-                    <!-- Logo added to the navigation panel -->
-                    <a href="../../../blog-en.html#">
-                        <img src="../../../assets/images/logo.png" alt="Logo of Carlos Cristancho Portfolio" class="logo">
-                    </a>
+            <div class="nav-header">
+                <nav class="nav-container">
+                    <div class="logo-section">
+                        <!-- Logo added to the navigation panel -->
+                        <a href="../../../blog-en.html#">
+                            <img src="../../../assets/images/logo.png" alt="Logo of Carlos Cristancho Portfolio" class="logo">
+                        </a>
+                    </div>
+                    <nav class="menu-section" aria-label="Main Navigation">
+                        <ul>
+                            <!-- Navigation menu -->
+                            <li><a href="../../../index.html#home" aria-label="Navigate to home section">
+                                Home</a>
+                            </li>
+                            <li>
+                                <a href="../../../blog-en.html#software" aria-label="Navigate to software development section">
+                                    Software<br>Development</a>
+                            </li>
+                            <li>
+                                <a href="../../../blog-en.html#instrumentation" aria-label="Navigate to Instrumentation Maintenance section">
+                                    Instrumentation<br>Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../../../blog-en.html#control-system" aria-label="Navigate to Control Systems Maintenance section">
+                                    Control Systems<br>Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="../../../blog-en.html#procedures" aria-label="Navigate to Maintenance Procedures section">
+                                    Maintenance<br>Procedures</a>
+                            </li>
+                            <li>
+                                <a href="../../../blog-en.html#plans" aria-label="Navigate to Maintenance Plans section">
+                                    Maintenance<br>Plans</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact-section">
+                        <!-- Contact -->
+                        <a href="../../../index.html#contact" class="contact-link" aria-label="Navigate to contact section">
+                            Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="cover-image-container">
+                <div class="text-overlay">
+                    <h1>Unraveling FFTW:<br><br>The Fastest Fourier Transform in the West</h1>
                 </div>
-                <nav class="menu-section" aria-label="Main Navigation">
+            </div>
+        </header>
+<!-- Vertical navigation bar on the left side ============ -->
+        <nav class="vertical-nav">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#introduction" aria-label="Navigate to Introduction section" class="posts-link">
+                        Introduction</a>
+                </li>
+                <li>
+                    <a href="#historical-overview" aria-label="Navigate to Historical Overview of FFTW section" class="posts-link">
+                        Historical Overview<br>of FFTW</a>
+                </li>                
+                <li>
+                    <a href="#fundamental-concepts" aria-label="Navigate to Fundamental Concepts section" class="posts-link">
+                        Fundamental<br>Concepts</a>
+                </li>
+                <li>
+                    <a href="#but-what-is" aria-label="Navigate to But what is FFTW? section" class="posts-link">
+                        But what<br>is FFTW?</a>
+                </li>
+                <li>
+                    <a href="#fftw-implementation" aria-label="Navigate to FFTW Implementation in C++ section" class="posts-link">
+                        FFTW Implementation<br>in C++</a>
+                </li>
+                <li>
+                    <a href="#results-analysis" aria-label="Navigate to Results Analysis section" class="posts-link">
+                        Results<br>Analysis</a>
+                </li>
+                <li>
+                    <a href="#conclusions" aria-label="Navigate to Conclusions section" class="posts-link">
+                        Conclusions</a>
+                </li>
+                <li>
+                    <a href="#bibliography-resources" aria-label="Navigate to Bibliography Resources section" class="posts-link">
+                        Bibliography<br>Resources</a>
+                </li>
+                <li>
+                    <a href="#contact-social-media" aria-label="Navigate to Contact and Social Media section" class="posts-link">
+                        Contact and<br>Social Media</a>
+                </li>
+            </ul>
+        </nav>
+<!-- Main Content Section -->
+        <div class="author">
+            <p>
+                by Carlos Cristancho, Spec. in Industrial Instrumentation and Control
+            </p>
+        </div>
+        <main class="article-container">
+            <!-- Introduction -->
+            <section id="introduction" class="article-content">
+                <h2>Introduction</h2>
+                <p>
+                    Fourier Transform has been an essential tool in signal analysis for decades. Since 
+                    its early formulations, this mathematical tool has enabled the decomposition of 
+                    complex signals into their basic sinusoidal components, facilitating their analysis, 
+                    manipulation, and understanding.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure1.gif" alt="Illustration of time and frequency domain relationship">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 1. Relationship between the time domain (in red) and the frequency domain (in blue)
+                        of a signal, based on its Fourier Transform. The original signal in the time domain is 
+                        decomposed into its frequency components, represented as peaks in the frequency domain. 
+                        Source: Wikimedia Commons, created by Lucas Vieira. Available under public domain.
+                    </p>
+                </div>
+                <p>
+                    However, the advancement of digital technology made it clear that there was a need to work 
+                    with systems that are discontinuous in time, leading to the development of the Discrete 
+                    Fourier Transform (DFT), a tool that allows for the same signal analysis but in discrete or 
+                    discontinuous time domains, which is crucial for digital systems.<br><br>Despite its great 
+                    utility, the DFT presents limitations in computational efficiency, especially when dealing 
+                    with large volumes of data. Once again, it became evident that more efficient methods were 
+                    needed to perform these decompositions.<br><br>This is where the Fast Fourier Transform (FFT) 
+                    comes into play, revolutionizing signal analysis by significantly reducing the computation 
+                    time required, making its practical implementation possible in countless applications.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure2.png" alt="Illustration of time and frequency domain relationship">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 2. Image created to illustrate the concept of price movements over time and their 
+                        decomposition into frequency components using the Fourier Transform, allowing the 
+                        identification of cyclic patterns and future trends.
+                    </p>
+                </div>
+                <p>
+                    The impact of the Fourier Transform goes beyond pure mathematics, as it has become a crucial 
+                    technique in various disciplines, from telecommunications engineering and physics to 
+                    biomedicine and data analysis, such as time series in the financial sector, for example.<br><br>
+                    This ability to decompose signals, regardless of their complexity, into a sum of sine waves is 
+                    what has enabled advances in technologies such as image processing, audio compression, 
+                    seismic data interpretation, and market trend forecasting, where these techniques are used 
+                    to identify cyclical patterns in price behavior.<br><br>The Discrete Fourier Transform 
+                    (DFT) was the first step towards computing these analyses in the digital realm, but its 
+                    high computational cost soon revealed the need for improvement. This is where the FFT comes 
+                    in, an optimization that drastically reduces the number of operations required, allowing 
+                    large datasets to be analyzed in feasible times.<br><br>However, as applications and 
+                    datasets grew larger, the demand for faster, more accurate, and more versatile 
+                    implementations led to the development of specialized libraries such as FFTW (the Fastest 
+                    Fourier Transform in the West).<br><br>Developed by Matteo Frigo and Steven G. Johnson at 
+                    MIT, FFTW has proven to be a highly efficient implementation of FFT. Its name, 'The Fastest 
+                    Fourier Transform in the West,' reflects its competitive spirit and focuses on performance.<br><br>                    
+                    FFTW has managed to position itself as one of the best options for FFT computation across 
+                    various platforms, thanks to its ability to adapt to different hardware architectures and 
+                    optimize the use of computational resources.<br><br>Over the years, FFTW has been widely 
+                    used in scientific computing applications, such as numerical simulations and signal 
+                    processing. Its modular design and ability to work with different dimensions and types of 
+                    data make it a versatile tool for any developer needing to perform fast Fourier transform 
+                    calculations efficiently.
+                </p>
+            </section>
+            <!-- Historical Overview -->
+            <section id="historical-overview" class="article-content">
+                <h2>Historical Overview of FFTW</h2>
+                <p>
+                    The FFTW project (Fastest Fourier Transform in the West) began in 1997, at a time when the 
+                    demand for faster and more efficient algorithms for performing the Fourier Transform was 
+                    booming.<br><br>In that decade, scientific computing and signal analysis were rapidly 
+                    advancing, but efficiency in Fourier calculations remained a crucial challenge in various 
+                    technological fields.<br><br>Research and improvement of algorithms for the Fast Fourier 
+                    Transform (FFT) had already spanned several decades, but there was growing interest in 
+                    optimizing both the speed and versatility of these calculations, especially for large-scale 
+                    applications.<br><br>FFTW was primarily developed by Matteo Frigo and Steven G. Johnson, two 
+                    mathematicians and computer scientists dedicated to improving algorithm performance. Frigo, 
+                    then a PhD student at MIT, and Johnson, a professor at the same institution, devised a 
+                    library that could automatically adapt to the specific architecture of any computer on which 
+                    it was executed.<br><br>This innovative approach made FFTW not only incredibly fast but also 
+                    extremely efficient across a wide variety of platforms, from simple processors to 
+                    supercomputers.<br><br>The first public version of FFTW was released in 1998 and quickly 
+                    became a reference in scientific computing, standing out for its speed.<br><br>The library 
+                    was designed to overcome the limitations of other Fast Fourier Transform implementations by 
+                    being able to automatically adapt to the architecture of the processor in use.<br><br>Over 
+                    the years, FFTW has evolved, improving its efficiency in several aspects: it added support 
+                    for multithreaded calculations, incorporated specialized variants for SIMD (Single 
+                    Instruction, Multiple Data) architectures, and optimized its algorithms for one, two, and 
+                    three-dimensional calculations.<br><br>FFTW remains one of the most widely used Fourier 
+                    libraries globally, as its latest version, FFTW 3, released in 2003, continues to be updated 
+                    and is compatible with modern processing architectures.
+                </p>
+            </section>
+            <!-- Fundamental Concepts -->
+            <section id="fundamental-concepts" class="article-content">
+                <h2>Fundamental Concepts</h2>
+                <p>
+                    The Fourier Transform is a mathematical tool that converts a signal from the time domain to 
+                    its representation in the frequency domain. Essentially, it breaks down a complex signal 
+                    into a set of sinusoidal waves of different frequencies.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure3.png" alt="Illustration of time and frequency domain relationship">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 3. Signal in the time and frequency domains. Source: Phonical, CC BY-SA 4.0 
+                        <a href="https:////creativecommons.org/licenses/by-sa/4.0">https:////creativecommons.org/licenses/by-sa/4.0</a>, 
+                        via Wikimedia Commons.
+                    </p>
+                </div>
+                <p>
+                    Its main application is signal analysis, allowing the identification of the dominant 
+                    frequency and essential characteristics of any continuous signal.<br><br>This is fundamental 
+                    in fields like telecommunications, where it is used for visual and audio signal processing, 
+                    in wave physics for vibration analysis, and in control systems for filtering noise in 
+                    electrical signals, among others.<br><br>The Discrete Fourier Transform (DFT) is a variant 
+                    of the Fourier Transform, adapted to work with discrete signals. As technology has advanced 
+                    towards digital systems, continuous signals have been replaced by digital signals, that is, 
+                    values taken at specific time intervals.<br><br>The DFT converts a discrete signal into a 
+                    series of frequency components, allowing the analysis of frequencies in digital systems. 
+                    Some examples of its use include analyzing the frequency of digital signals in applications 
+                    like image and audio compression, frequency detection in financial time series, and more.<br><br>                    
+                    Although the DFT is a powerful tool, its computational cost is high, especially for large 
+                    signals. This is where the Fast Fourier Transform (FFT) comes in, an algorithmic improvement 
+                    that significantly reduces the computation time, going from O(N²) complexity in the DFT to 
+                    O(N logN) in the FFT.<br><br>This has made signal analysis more efficient by allowing 
+                    electronic devices and computing systems to process signals much faster, making it a 
+                    cornerstone of modern technology.<br><br>In summary, while the FT is the general tool 
+                    applied to continuous signals and is useful in mathematical theory, the DFT is its discrete 
+                    counterpart used for signals in digital systems, and the FFT is an optimized algorithm to 
+                    compute the DFT efficiently, drastically reducing processing time.<br><br>Despite the 
+                    advantages of FFT, there was room to improve its performance on modern hardware. This is 
+                    where FFTW (Fastest Fourier Transform in the West) comes in.<br><br>FFTW is a highly 
+                    optimized software library for computing FFT on various hardware architectures, taking 
+                    advantage of cache memory and the specific characteristics of each system.<br><br>FFTW 
+                    achieves outstanding performance by dynamically generating optimized code at runtime, 
+                    allowing FFT calculations faster than traditional implementations.<br><br>Its appearance has 
+                    facilitated the analysis of high-frequency signals in scientific research and advanced 
+                    engineering applications, marking a milestone in FFT computation across various systems.                    
+                </p>
+            </section>
+            <!-- But What Is FFTW? -->
+            <section id="but-what-is" class="article-content">
+                <h2>But what is FFTW?</h2>
+                <p>
+                    FFTW, which stands for 'Fastest Fourier Transform in the West', is a widely used library for 
+                    computing the Fast Fourier Transform (FFT). Initially developed at MIT, its purpose is to 
+                    optimize FFT performance across different platforms, being adaptable to both complex and real 
+                    data, in one or multiple dimensions.<br><br>FFTW uses a unique approach known as 'planning', 
+                    where it optimizes operations for the specific hardware on which it is run, allowing the 
+                    computation to be as efficient as possible.<br><br>The efficiency of FFTW comes from its 
+                    ability to generate plans that optimize the FFT calculation. The software automatically 
+                    selects from various execution strategies, allowing it to adapt to the specificities of the 
+                    target hardware.<br><br>It uses a combination of techniques, such as recursive factorization 
+                    and redundancy elimination in the calculation, which drastically reduce the number of 
+                    operations needed compared to traditional implementations.<br><br>FFTW also takes processor 
+                    cache into account, optimizing memory usage and reducing access times, making it one of the 
+                    fastest FFT implementations.<br><br>While other FFT libraries, such as NVIDIA’s cuFFT for 
+                    GPU or Intel's FFT, are also highly efficient on specific platforms, FFTW stands out for its 
+                    ability to adapt to a wide variety of architectures and devices, optimizing performance 
+                    without manual intervention.<br><br>Unlike manual FFT implementations, which can be useful 
+                    for very specific applications but are prone to errors and rarely optimize automatically, 
+                    FFTW simplifies the process by automatically generating the most efficient strategies. Among 
+                    the key advantages of using FFTW, we can mention:
                     <ul>
-                        <!-- Navigation menu -->
-                        <li><a href="../../../index.html#home" aria-label="Navigate to home section">
-                            Home</a>
+                        <li>
+                            <b>Portability</b>: FFTW is compatible with a variety of platforms and operating 
+                            systems, ensuring that code using FFTW is portable and efficient across multiple 
+                            environments.<br><br>
                         </li>
                         <li>
-                            <a href="../../../blog-en.html#software" aria-label="Navigate to software development section">
-                                Software<br>Development</a>
+                            <b>Automatic optimization</b>: The developer doesn't need to manually optimize FFT 
+                            operations, as FFTW automatically generates the best plan for the hardware.<br><br>
                         </li>
                         <li>
-                            <a href="../../../blog-en.html#instrumentation" aria-label="Navigate to Instrumentation Maintenance section">
-                                Instrumentation<br>Maintenance</a>
+                            <b>Versatility</b>: FFTW supports one-dimensional and multidimensional Fourier 
+                            transformations, as well as working with complex and real signals.<br><br>
                         </li>
                         <li>
-                            <a href="../../../blog-en.html#control-system" aria-label="Navigate to Control Systems Maintenance section">
-                                Control Systems<br>Maintenance</a>
-                        </li>
-                        <li>
-                            <a href="../../../blog-en.html#procedures" aria-label="Navigate to Maintenance Procedures section">
-                                Maintenance<br>Procedures</a>
-                        </li>
-                        <li>
-                            <a href="../../../blog-en.html#plans" aria-label="Navigate to Maintenance Plans section">
-                                Maintenance<br>Plans</a>
+                            <b>Large community and support</b>: FFTW is an open-source library with widespread 
+                            use in the scientific and technical community, ensuring access to documentation and 
+                            continuous support.<br><br>
                         </li>
                     </ul>
-                </nav>
-                <div class="contact-section">
-                    <!-- Contact -->
-                    <a href="../../../index.html#contact" class="contact-link" aria-label="Navigate to contact section">
-                        Contact</a>
-                </div>
-            </nav>
-        </header>
-<!-- Main Content Section -->
-    <main class="article-container">
-        <h1>Unraveling FFTW: The Fastest Fourier Transform in the West</h1>
-        <p class="author">by Carlos Cristancho, Spec. in Industrial Instrumentation and Control</p>
-        <img src="../../../assets/images/fftw-cpp-images/coverFFTWCpp.png" alt="Unraveling FFTW" class="blog-cover-image">
-        <!-- Introduction -->
-        <section>
-            <h2>Introduction</h2>
-            <p>
-                Fourier Transform has been an essential tool in signal analysis for decades. Since 
-                its early formulations, this mathematical tool has enabled the decomposition of 
-                complex signals into their basic sinusoidal components, facilitating their analysis, 
-                manipulation, and understanding.
-            </p>
-            <img src="../../../assets/images/fftw-cpp-images/Figure1.png" alt="Illustration of time and frequency domain relationship" class="article-image">
-            <p class="image-caption">
-                Figure 1: Relationship between time and frequency domain. Source: Wikimedia Commons
-            </p>
-        </section>
-        <!-- Historical Overview -->
-        <section>
-            <h2>Historical Overview of FFTW</h2>
-            <p>The FFTW project began in 1997, aiming to improve Fourier Transform computations...</p>
-        </section>
+                </p>
+            </section>
+            <!-- FFTW Implementation in C++ -->
+            <section id="fftw-implementation" class="article-content">
+                <h2>FFTW Implementation in C++</h2>
+            </section>
+            <!-- Results Analysis -->
+            <section id="results-analysis" class="article-content">
+            </section>
+            <!-- Conclusions -->
+            <section id="conclusions" class="article-content">
+            </section>
+            <!-- Bibliography and Resources -->
+            <section id="bibliography-resources" class="article-content">
+            </section>
+            <!-- Contact and Social Media -->
+            <section id="contact-social-media" class="article-content">
+            </section>            
+        </main>
+        <script src="../../../assets/js/typewriter.js"></script>
     </body>
 </html>

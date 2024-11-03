@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    let text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
+    let text;
+    if(window.location.href.includes('index.html')){
+        text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
+    } else {
+        text = "Unraveling FFTW:\n\nThe Fastest Fourier Transform in the West"
+    }
+
     let index = 0;
     const typingSpeed = 100; // Adjust the typing speed
     const typingDiv = document.querySelector('.text-overlay h1');
