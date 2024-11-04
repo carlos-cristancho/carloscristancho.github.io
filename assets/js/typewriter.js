@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     let text;
-    if(window.location.href.includes('index.html')){
+    if(window.location.pathname === '/' || window.location.href.includes('index.html')){
         text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
     } else {
         text = "Unraveling FFTW:\n\nThe Fastest Fourier Transform in the West"
