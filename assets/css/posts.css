@@ -246,9 +246,21 @@ html {
     text-align: justify;
     border: 1px solid yellow;
 }
+.icon {
+    width: 24px; /* Adjust the icon size */
+    height: auto;
+    margin-right: 4px; /* Space between the icon and the text */
+}
 .article-image {
     flex: 1;
+    max-width: 100%;
+    overflow: hidden;
     border: 1px solid red;
+}
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .image-caption p {
     font-size: 0.75em;

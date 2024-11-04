@@ -302,18 +302,234 @@
             <!-- FFTW Implementation in C++ -->
             <section id="fftw-implementation" class="article-content">
                 <h2>FFTW Implementation in C++</h2>
+                <p>
+                    The implementation of FFTW in C++ follows a structured process that, although it involves 
+                    several steps, ensures an efficient and functional integration of this powerful library into 
+                    any project. Below are the essential steps to set up FFTW in a C++ environment using the 
+                    Visual Studio IDE.
+                    <ul>
+                        <li>
+                            <b>Before starting the implementation</b>, it's necessary to ensure that the 
+                            development environment is ready. Visual Studio must be properly installed, along 
+                            with the necessary compilers for working with C++. It is important to have a 
+                            compatible version of Visual Studio with C++ support, preferably version 2022 or 
+                            higher. Additionally, you should verify that the project is configured to work with 
+                            the appropriate architectures, such as <i>x86</i> (32-bit) and <i>x64</i> (64-bit).<br><br>
+                        </li>
+                        <li>
+                            <b>The next step is to download the appropriate version of the FFTW library</b>. 
+                            Depending on your project's architecture (32 or 64 bits), you should download the 
+                            precompiled version of the library from the official FFTW website. Versions are 
+                            available for both Windows and Linux, as well as source files if you prefer to 
+                            compile the library yourself.<br><br>
+                        </li>
+                        <li>
+                            Once the library is downloaded, if necessary, you can <b>compile the <i>.dll</i> and 
+                            <i>.lib</i></b> files from the <i>.def</i> definition files. This is done using the 
+                            Visual Studio compiler. The compilation will generate dynamic library files 
+                            (<i>.dll</i>) and static libraries (<i>.lib</i>), which will be used in the project. 
+                            A useful command for this task in 32-bit architecture is: 
+                            <i><b>lib/def:libfftw3-3.def/out:fftw3.lib/machine:x86</b></i>. Whereas for a 64-bit 
+                            architecture it is: 
+                            <i><b>lib/def:libfftw3-3.def/out:fftw3.lib/machine:x64</b></i>.<br><br>
+                        </li>
+                        <li>
+                            <b>To use FFTW in your project</b>, you must include the header files (.h) and 
+                            libraries (.lib). This is done by adding the corresponding paths to the files in 
+                            the <i>.vcxproj project</i> file in Visual Studio, as shown in images 4 through 7.<br><br>
+                        </li>
+                        <li>
+                            It is necessary to ensure that <b>the project is configured with the correct 
+                            architecture</b>. In theory, Visual Studio allows switching between 32-bit and 64-bit 
+                            configurations by selecting the dropdown menu located in the top bar. It is important 
+                            that the architecture of the FFTW library matches the architecture of the project, 
+                            meaning if the 32-bit version of FFTW is downloaded, the project must be configured 
+                            to compile in x86 (Win32).                            
+                        </li>
+                    </ul>
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure4.png" alt="Debug Win32 mode configuration.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 4. Debug Win32 mode configuration.
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure5.png" alt="Release Win32 mode configuration.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 5. Release Win32 mode configuration.
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure6.png" alt="Debug x64 mode configuration.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 6. Debug x64 mode configuration.
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure7.png" alt="Release x64 mode configuration.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 7. Release x64 mode configuration.
+                    </p>
+                </div>
+                <p>
+                    The image shown below is a simple example of code implementing FFTW to compute the Fast 
+                    Fourier Transform on a one-dimensional discrete signal. Code explanation:
+                    <ul>
+                        <li>
+                            <b>FFTW Library</b>: First, we include the header file <i>fftw3.h</i>, which contains 
+                            the definitions of the functions needed to use FFTW.<br><br>
+                        </li>
+                        <li>
+                            <b>Signal declaration</b>: A signal of size 16 (N = 16) is declared in the vector 
+                            <i>in[]</i>. The vector <i>out[]</i> is also declared to store the FFT result.<br><br>
+                        </li>
+                        <li>
+                            <b>Planning</b>: <i>fftw_plan_dft_1d()</i> generates an FFT plan to transform the 
+                            one-dimensional signal. The <i>fftw_plan_dft_1d()</i> function receives the signal size, 
+                            the input vector, the output vector, the transform direction (in this case, forward 
+                            <i>FFTW_FORWARD)</i>, and an estimation option <i>FFTW_ESTIMATE</i>.<br><br>
+                        </li>
+                        <li>
+                            <b>FFT execution</b>: <i>fftw_execute()</i> is used to perform the Fast Fourier 
+                            Transform on the signal.<br><br>
+                        </li>
+                        <li>
+                            <b>Displaying results</b>: The FFT result is stored in the <i>out[]</i> vector, and 
+                            each value is printed.<br><br>
+                        </li>
+                        <li>
+                            <b>Cleanup</b>: Finally, the plan is destroyed with <i>fftw_destroy_plan()</i> and 
+                            <i>fftw_cleanup()</i> is called to free the memory used by FFTW.<br><br>
+                        </li>
+                    </ul>
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure8.png" alt="Example of C++ code that implements FFTW.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 8. Example of C++ code that implements FFTW to perform a Fast Fourier Transform 
+                        (FFT) on an input signal.
+                    </p>
+                </div>
             </section>
             <!-- Results Analysis -->
             <section id="results-analysis" class="article-content">
+                <h2>Results Analysis</h2>
+                <p>
+                    The FFT works by decomposing the original signal into a sum of sinusoidal waves of different 
+                    frequencies.<br><br>The process essentially converts a signal from the time domain to the 
+                    frequency domain, allowing the identification of the frequency components that make up the 
+                    original signal.<br><br>In our specific case, the FFT decomposed the input signal (a sequence 
+                    of real numbers from 0 to 15, where the values correspond to discrete points of a real 
+                    function in time) into a series of frequencies.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure9.png" alt="Console output of the FFTW execution.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 9. Console output of the FFTW execution, showing the complex output values 
+                        obtained after applying the Fast Fourier Transform to a 16-sample input signal in an 
+                        x86 environment.
+                    </p>
+                </div>
+                <p>
+                    Due to the simplicity of the signal (numbers from 0 to 15), the FFT identified that most of 
+                    the energy is concentrated in the low frequencies, which is reflected in the values obtained 
+                    in the spectrum.<br><br>The result of the FFT is a series of complex values representing the 
+                    frequencies present in the original signal. These frequencies are displayed in terms of their 
+                    amplitude and phase, allowing us to visualize which frequencies dominate in the input signal.<br><br>
+                    The complex value <i>out[0]</i> indicates the amplitude of the zero-frequency component, or the 
+                    'constant frequency' (DC). In our case, the amplitude of the constant frequency is high due 
+                    to the linear nature of the input signal.<br><br>The successive values, such as <i>out[1]</i> and 
+                    <i>out[2]</i>, indicate the amplitude and phase of the higher-frequency components. The real 
+                    values correspond to the magnitude of the sinusoidal component, while the imaginary values 
+                    indicate the phase of that frequency.<br><br>The observed pattern in the results shows that 
+                    for a linear signal, the dominant frequency is the constant one (zero frequency), which 
+                    explains the high value in <i>out[0]</i>.<br><br>As we move through the spectrum, the values 
+                    tend to decrease, indicating that higher frequencies have less impact on the original signal.<br><br>
+                    In more complex applications, such as audio analysis or image processing, the FFT can reveal 
+                    more interesting frequency components, such as the presence of specific tones in an audio 
+                    signal or repetitive patterns in an image.
+                </p>
             </section>
             <!-- Conclusions -->
             <section id="conclusions" class="article-content">
+                <h2>Conclusions</h2>
+                <p>
+                    The success in implementing FFTW not only highlights its efficiency in handling the FFT but 
+                    also its potential in future scientific and development projects.<br><br>From signal analysis 
+                    in fields such as physics and engineering, to its use in image processing, data compression, 
+                    system simulation, and trend prediction in finance, FFTW will continue to be an essential tool.<br><br>
+                    Its ability to work with different data sizes and hardware configurations makes it a versatile 
+                    option that will undoubtedly be integrated into innovative projects across various areas of 
+                    knowledge and industry.<br><br>It is safe to say that FFTW will continue to evolve, providing 
+                    fast and efficient solutions in the ever-changing landscape of technology.<br><br>Implementing 
+                    the FFTW library in C++ allowed firsthand experience of the flexibility and power this tool 
+                    offers. From the initial setup to the successful execution of the program, challenges were 
+                    overcome thanks to the clear documentation of the library and the developer community that 
+                    has contributed to its evolution.<br><br>The implementation itself gave us the opportunity to 
+                    appreciate how a tool like FFTW facilitates working with large volumes of data by performing 
+                    calculations efficiently and accurately.<br><br>Moreover, it deepened our understanding of 
+                    the importance of using optimized libraries designed to fully leverage hardware resources, 
+                    especially in scientific and engineering applications.
+                </p>
             </section>
             <!-- Bibliography and Resources -->
             <section id="bibliography-resources" class="article-content">
+                <h2>Bibliography and Resources</h2>
+                <p>
+                    The <a href="https://fftw.org/install/windows.html">official FFTW website</a> is the best 
+                    starting point for obtaining direct and up-to-date information about this powerful library.
+                    From downloading versions to accessing detailed technical documentation, this site offers all 
+                    the resources needed for those looking to implement FFTW in their projects.<br><br>For those 
+                    who wish to dive deeper into the library, the <a href="https://www.fftw.org/fftw3_doc/Installation-on-non_002dUnix-systems.html">
+                    official FFTW manual</a> provides detailed examples and technical explanations on how to 
+                    fully utilize the library’s capabilities. From installation to advanced implementation, this 
+                    manual is an indispensable tool.<br><br>FFTW has been the subject of study in various 
+                    scientific research papers. Among the most relevant are publications that explain its 
+                    architecture and the algorithms it uses to achieve the efficiency it is known for. It is 
+                    recommended to explore studies by Matteo Frigo and Steven G. Johnson, the creators of FFTW, 
+                    who have published numerous articles in scientific journals detailing the inner <a href="https://ieeexplore.ieee.org/document/1386650">
+                    workings of the library</a>.<br><br>The official FFTW page provides <a href="https://www.fftw.org/#documentation">
+                    code examples</a> for implementing FFTW in different languages, with C and C++ being the most 
+                    common. These examples allow developers to quickly start using the library in their projects.<br><br>
+                    On platforms such as <a href="https://stackoverflow.com/questions/31595869/how-to-resolve-the-module-machine-type-x86-conflicts-with-target-machine-type">
+                    Stack Overflow</a> and <a href="https://github.com/carlos-cristancho">GitHub</a>, there are active 
+                    communities discussing FFTW, providing solutions to common problems and sharing code examples to implement 
+                    FFTW in specific projects.<br><br>There are <a href="https://www.youtube.com/watch?v=mQYUxSMKgSU">online 
+                    tutorials</a> that explain in a didactic way how to install and configure FFTW, as well as how to optimize 
+                    its use in projects. It is recommended to search for courses and videos on platforms such as 
+                    YouTube, Coursera, or Udemy to gain a visual and practical understanding of its use.
+                </p>
             </section>
             <!-- Contact and Social Media -->
             <section id="contact-social-media" class="article-content">
+                <h2>Contact and Social Media</h2>
+                <p>
+                    If you would like to collaborate on future projects, discuss technical topics, or follow the 
+                    content I develop, I invite you to connect with me through the following platforms:
+                    <ul>
+                        <li>
+                            <img src="../../../assets/images/social-media-images/Email.png" alt="Email Icon" class="icon">
+                            Email: <a href="mailto:contact@carloscristancho.com">contact@carloscristancho.com</a>
+                        </li>
+                        <li>
+                            <img src="../../../assets/images/social-media-images/LinkedIn.png" alt="Email Icon" class="icon">
+                            Email: <a href="https://linkedin.com/in/carlos-cristancho">carlos-cristancho</a>
+                        </li>                        
+                    </ul>
+                </p>
             </section>            
         </main>
         <script src="../../../assets/js/typewriter.js"></script>

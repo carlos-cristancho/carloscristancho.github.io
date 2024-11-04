@@ -435,7 +435,7 @@ html {
 }
 
 .icon {
-    width: 24px;  /* Adjust the icon size */
+    width: 20px;  /* Adjust the icon size */
     height: auto;
     margin-right: 4px;  /* Space between the icon and the text */
 }
