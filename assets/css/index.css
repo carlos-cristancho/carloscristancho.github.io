@@ -259,7 +259,6 @@ html {
     font-size: 2em;
     margin: 15px;
 }
-
 .scroll-container {
     display: flex;
     align-items: center; /* Vertically align the buttons and the container */
@@ -274,11 +273,9 @@ html {
     scrollbar-width: none;
     scroll-behavior: smooth; /* Smooth scrolling */
 }
-
 .projects-container::-webkit-scrollbar {
     display: none; /* For WebKit-based browsers like Chrome and Safari */
 }
-
 .scroll-btn {
     position: absolute;
     top: 50%; /* Vertical center */
@@ -292,19 +289,15 @@ html {
     border-radius: 50%;
     z-index: 20; /* Ensure it is above the cards */
 }
-
 .left-btn {
     left: 5px; /* Left button on the edge */
 }
-
 .right-btn {
     right: 5px; /* right button on the edge */
 }
-
 .scroll-btn:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
 }
-
 .project-card {
     position: relative;
     min-width: 200px;
@@ -317,28 +310,22 @@ html {
     flex-shrink: 0;
     margin: 5px 20px;
 }
-
 .blue-project {
     background-color: var(--blue-card);
 }
-
 .green-project {
     background-color: var(--green-card);
 }
-
 .violet-project {
     background-color: var(--violet-card);
 }
-
 .red-project {
     background-color: var(--red-card);
 }
-
 .project-card h3 {
     text-decoration: underline;
     color: var(--primary-text);
 }
-
 .project-card p {
     font-size: 1.2em;
     line-height: 1.6;
@@ -347,17 +334,14 @@ html {
     text-align: left;
     color: var(--primary-text);
 }
-
 .project-card:hover {
     transform: rotate(1deg) scale(1.05) translateX(50px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 10; /* For the active card to be on top */
 }
-
 .project-card:nth-child(n+2) {
     margin-left: -150px; /* Partially overlay the cards */
 }
-
 .project-button {
     display: inline-block;
     margin-top: 20px;
@@ -370,74 +354,51 @@ html {
     transition: background-color 0.3s ease;
     text-align: center;
 }
-
 .blue-projects-button {
     background-color: var(--blue-button);
 }
-
 .green-projects-button {
     background-color: var(--green-button);
 }
-
 .violet-projects-button {
     background-color: var(--violet-button);
 }
-
 .red-projects-button {
     background-color: var(--red-button);
 }
-
 .project-button:hover {
     background-color: #555;
 }
-
-/* About Section ================================================ */
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+/* ================================== CONTACT SECTION ================================================ */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-#about {
-    padding: 60px 20px;
-    background-color: rgba(white, 0.9); /* White background with a bit of transparency */
-    text-align: center;
-    border-radius: 10px; /* Add a rounded border */
-}
-
-#about h2 {
+/* > */
+.title {
     font-size: 2em;
-    margin-bottom: 15px;
 }
-
-#about p {
+/* > */
+.paragraph {
     font-size: 1.2em;
     line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-/* Contact Section ================================================ */
-#contact h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 75%;
     text-align: left;
 }
-
+/* > */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+/* >-> */
 .icon {
-    width: 20px;  /* Adjust the icon size */
+    width: 60px;  /* Adjust the icon size */
     height: auto;
-    margin-right: 4px;  /* Space between the icon and the text */
+    margin: 10px 20px;  /* Space between the icon and the text */
+    padding: 10px;
 }
 
 /* Main Container Style ================================================ */
