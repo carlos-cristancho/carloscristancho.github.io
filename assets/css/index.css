@@ -400,6 +400,9 @@ html {
     margin: 10px 20px;  /* Space between the icon and the text */
     padding: 10px;
 }
+.icon:hover {
+    transform: translateY(-10px); /* Elevation effect */
+}
 
 /* Main Container Style ================================================ */
 .container {

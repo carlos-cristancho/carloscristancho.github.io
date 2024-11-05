@@ -169,6 +169,7 @@ header::before {
 /* ========================= LEFT VERTICAL NAVIGATION BAR ============================================ */
 .vertical-nav {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: fixed;
@@ -223,18 +224,15 @@ html {
 .article-container{
     margin: 0 10px 0 180px; /* Leaves space for the left navigation bar with 180px */
     padding: 0 10px;
-    border: 1px solid red;
 }
 .article-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid green;
 }
 .article-content h2 {
     flex: 1;
     font-size: 1.2em;
-    border: 1pt solid green;
     text-align: center;
 }
 .article-content p {
@@ -244,18 +242,11 @@ html {
     padding: 0 10px 10px;
     color: var(--description-text);
     text-align: justify;
-    border: 1px solid yellow;
-}
-.icon {
-    width: 24px; /* Adjust the icon size */
-    height: auto;
-    margin-right: 4px; /* Space between the icon and the text */
 }
 .article-image {
     flex: 1;
     max-width: 100%;
     overflow: hidden;
-    border: 1px solid red;
 }
 .article-image img {
     width: 100%;
@@ -267,5 +258,4 @@ html {
     font-style: italic;
     text-align: center;
     margin: 0 180px 0 180px;
-    border: 2px solid blue;
 }
