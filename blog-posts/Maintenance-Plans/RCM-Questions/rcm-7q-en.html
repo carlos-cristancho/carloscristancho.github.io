@@ -3,12 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="THE FASTEST FOURIER TRANSFORM IN THE WEST. Post by Carlos Cristancho.">
-        <meta name="keywords" content="FFTW, Fast Fourier Transform, Fourier Transform, C++, signal processing, digital signal, Carlos Cristancho">
-        <title>THE FASTEST FOURIER TRANSFORM IN THE WEST</title>
+        <meta name="description" content="THE 7 QUESTIONS OF RCM. Post by Carlos Cristancho.">
+        <meta name="keywords" content="RCM, Reliability-Centered Maintenance, SAE JA1011, SAE JA1012, maintenance, instrumentation, Gas&Oil, Gas and Oil, control systems, Carlos Cristancho">
+        <title>THE 7 QUESTIONS OF RCM</title>
         <link rel="stylesheet" href="../../../assets/css/posts.css">
     </head>
-
     <body>
 <!-- Header and Navigation -->
         <header>
@@ -57,7 +56,7 @@
             </div>
             <div class="cover-image-container">
                 <div class="text-overlay">
-                    <h1>The Fastest Fourier Transform<br><br>in the West</h1>
+                    <h1>The 7 Quesitions of<br><br>RCM</h1>
                 </div>
             </div>
         </header>
@@ -70,25 +69,33 @@
                         Introduction</a>
                 </li>
                 <li>
-                    <a href="#historical-overview" aria-label="Navigate to Historical Overview of FFTW section" class="posts-link">
-                        Historical Overview<br>of FFTW</a>
-                </li>                
-                <li>
-                    <a href="#fundamental-concepts" aria-label="Navigate to Fundamental Concepts section" class="posts-link">
-                        Fundamental<br>Concepts</a>
+                    <a href="#Question-1" aria-label="Navigate to Question 1" class="posts-link">
+                        Question 1</a>
                 </li>
                 <li>
-                    <a href="#but-what-is" aria-label="Navigate to But what is FFTW? section" class="posts-link">
-                        But what<br>is FFTW?</a>
+                    <a href="#Question-2" aria-label="Navigate to Question-2" class="posts-link">
+                        Question 2</a>
                 </li>
                 <li>
-                    <a href="#fftw-implementation" aria-label="Navigate to FFTW Implementation in C++ section" class="posts-link">
-                        FFTW Implementation<br>in C++</a>
+                    <a href="#Question-3" aria-label="Navigate to Question-3" class="posts-link">
+                        Question 3</a>
                 </li>
                 <li>
-                    <a href="#results-analysis" aria-label="Navigate to Results Analysis section" class="posts-link">
-                        Results<br>Analysis</a>
+                    <a href="#Question-4" aria-label="Navigate to Question-4" class="posts-link">
+                        Question-4</a>
                 </li>
+                <li>
+                    <a href="#Question-5" aria-label="Navigate to Question-5" class="posts-link">
+                        Question 5</a>
+                </li>
+                <li>
+                    <a href="#Question-6" aria-label="Navigate to Question-6" class="posts-link">
+                        Question 6</a>
+                </li>
+                <li>
+                    <a href="#Question-7" aria-label="Navigate to Question-7" class="posts-link">
+                        Question 7</a>
+                </li>                                
                 <li>
                     <a href="#conclusions" aria-label="Navigate to Conclusions section" class="posts-link">
                         Conclusions</a>
@@ -106,104 +113,147 @@
             </p>
         </div>
         <main class="article-container">
-            <!-- Introduction -->
+<!-- Introduction -->
             <section id="introduction" class="article-content">
                 <h2>Introduction</h2>
                 <p>
-                    Fourier Transform has been an essential tool in signal analysis for decades. Since 
-                    its early formulations, this mathematical tool has enabled the decomposition of 
-                    complex signals into their basic sinusoidal components, facilitating their analysis, 
-                    manipulation, and understanding.
+                    In the oil and gas industry, the reliability of instrumentation equipment and industrial 
+                    control systems is fundamental to ensuring operational continuity, process safety, and the 
+                    profitability of operations. Maintaining these assets requires a strategic and structured 
+                    approach, especially in a sector where the margin for error is minimal and the consequences 
+                    of failure can be catastrophic. In this context, Reliability-Centered Maintenance (RCM) 
+                    becomes an essential tool.<br><br>The SAE JA1011 standard establishes clear and specific 
+                    criteria for evaluating RCM processes, proposing a set of “7 questions” that guide the 
+                    implementation of this methodology. These questions allow maintenance and reliability managers 
+                    to effectively identify and manage failure risks, establishing preventive and predictive 
+                    maintenance strategies that optimize resources and maximize the lifespan of assets.<br><br>The 
+                    SAE JA1012 standard provides a detailed explanation of the essential criteria guiding the 
+                    answers to the “7 questions”, defining the necessary requirements for evaluating RCM processes 
+                    and identifying additional elements that must be considered to ensure effective 
+                    implementation. This offers a comprehensive framework for those who wish to rigorously and 
+                    successfully apply the RCM methodology.<br><br>In this article, I aim to explore each of the 
+                    “7 RCM questions” from the perspective of instrumentation and control systems applied to the 
+                    oil and gas production industry, a field in which I have developed my professional career. 
+                    Throughout this analysis, I will share examples and reflections based on my direct experience 
+                    in designing and implementing maintenance plans. This practical approach will enable readers 
+                    to visualize how the principles of the SAE JA1011 standard, in conjunction with the SAE JA1012 
+                    standard, can be applied in critical industrial environments, helping to prevent unplanned 
+                    downtime, optimize safety, and reduce operational costs.<br><br>The intention of this article 
+                    is to provide a structured and practical guide that enables professionals in the sector to 
+                    develop robust maintenance plans tailored to the specific needs of the oil and gas industry. 
+                    By applying RCM principles, maintenance teams can significantly improve the reliability and 
+                    performance of assets, ensuring safer and more efficient operations.                    
+                </p>
+            </section>
+<!-- Question 1 -->
+            <section id="Question-1" class="article-content">
+                <h2>What are the desired functions and associated performance standards of the asset in its 
+                    current operational context (functions)?
+                </h2>
+                <p>
+                    To implement Reliability-Centered Maintenance (RCM) on instrumentation equipment and 
+                    industrial control systems within the oil and gas sector, it is essential to clearly 
+                    understand the desired functions of each asset and the performance standards it must meet in 
+                    its operational context. In this industry, these systems play a critical role in ensuring 
+                    that processes remain stable, efficient, and, above all, safe. Any deviation in their 
+                    operating parameters can jeopardize operations and lead to significant financial losses.<br><br>
+                    The first step in developing any maintenance plan, which aligns with section 5.1.1 of the 
+                    SAE JA1011 standard, is a demanding and highly responsible task. Defining the operational 
+                    context of each asset requires searching, collecting, and connecting the documentation related 
+                    to the project's design and construction, particularly for new equipment or projects. For 
+                    assets or projects already in operation, this process also necessitates access to operational 
+                    history.<br><br>Based on my professional experience, the documentation I have used as input 
+                    for defining the operational context applicable to instrumentation and control systems is 
+                    illustrated in Figure 1. This initial step also requires effective, multidisciplinary 
+                    communication with the organizational departments involved in project development or 
+                    operation, in conjunction with the application of international, national, regional, and 
+                    company-specific standards.<br><br>This is because the functions and failure management 
+                    strategies of an asset are influenced not only by the asset itself but also by the context in 
+                    which it operates. Therefore, a clear definition of the operational context is essential 
+                    before addressing questions related to asset performance and reliability.<br><br>A 
+                    description of how instrumentation and control systems are intended to be used in a specific 
+                    project, the geographical and environmental conditions where these systems will operate, along 
+                    with standards related to production, performance, safety, and environmental integrity, are 
+                    the required components for declaring an operational context.<br><br>In Figure 1, it can also 
+                    be observed that the output of the operational context declaration is a document that 
+                    identifies whether the instrumentation and/or control system will operate in a batch 
+                    (intermittent) or flow (continuous) process, the expectations for product quality and 
+                    customer service, including metrics such as waste rates and customer satisfaction, and 
+                    compliance with relevant environmental regulations at organizational, regional, national, and 
+                    international levels.<br><br>Additionally, the document declaring the operational context 
+                    must identify established safety expectations, including injury and fatality rates, the 
+                    characteristics of the operational environment (e.g., arctic or tropical), the operational 
+                    schedule (e.g., continuous or intermittent), and load conditions (maximum load or base load), 
+                    as well as the availability of backup systems or capacities.                    
                 </p>
                 <div class="article-image">
-                    <img src="../../../assets/images/fftw-cpp-images/Figure1.gif" alt="Illustration of time and frequency domain relationship">
+                    <img src="../../../assets/images/questions-rcm/Figure1.png" alt="Illustration of time and frequency domain relationship">
                 </div>
                 <div class="image-caption">
                     <p>
-                        Figure 1. Relationship between the time domain (in red) and the frequency domain (in blue)
-                        of a signal, based on its Fourier Transform. The original signal in the time domain is 
-                        decomposed into its frequency components, represented as peaks in the frequency domain. 
-                        Source: Wikimedia Commons, created by Lucas Vieira. Available under public domain.
+                        Figure 1. Scheme based on the operational context criteria and guidelines described in 
+                        SAE JA1011 and SAE JA1012 standards.
                     </p>
                 </div>
                 <p>
-                    However, the advancement of digital technology made it clear that there was a need to work 
-                    with systems that are discontinuous in time, leading to the development of the Discrete 
-                    Fourier Transform (DFT), a tool that allows for the same signal analysis but in discrete or 
-                    discontinuous time domains, which is crucial for digital systems.<br><br>Despite its great 
-                    utility, the DFT presents limitations in computational efficiency, especially when dealing 
-                    with large volumes of data. Once again, it became evident that more efficient methods were 
-                    needed to perform these decompositions.<br><br>This is where the Fast Fourier Transform (FFT) 
-                    comes into play, revolutionizing signal analysis by significantly reducing the computation 
-                    time required, making its practical implementation possible in countless applications.
-                </p>
-                <div class="article-image">
-                    <img src="../../../assets/images/fftw-cpp-images/Figure2.png" alt="Illustration of time and frequency domain relationship">
-                </div>
-                <div class="image-caption">
-                    <p>
-                        Figure 2. Image created to illustrate the concept of price movements over time and their 
-                        decomposition into frequency components using the Fourier Transform, allowing the 
-                        identification of cyclic patterns and future trends.
-                    </p>
-                </div>
-                <p>
-                    The impact of the Fourier Transform goes beyond pure mathematics, as it has become a crucial 
-                    technique in various disciplines, from telecommunications engineering and physics to 
-                    biomedicine and data analysis, such as time series in the financial sector, for example.<br><br>
-                    This ability to decompose signals, regardless of their complexity, into a sum of sine waves is 
-                    what has enabled advances in technologies such as image processing, audio compression, 
-                    seismic data interpretation, and market trend forecasting, where these techniques are used 
-                    to identify cyclical patterns in price behavior.<br><br>The Discrete Fourier Transform 
-                    (DFT) was the first step towards computing these analyses in the digital realm, but its 
-                    high computational cost soon revealed the need for improvement. This is where the FFT comes 
-                    in, an optimization that drastically reduces the number of operations required, allowing 
-                    large datasets to be analyzed in feasible times.<br><br>However, as applications and 
-                    datasets grew larger, the demand for faster, more accurate, and more versatile 
-                    implementations led to the development of specialized libraries such as FFTW (the Fastest 
-                    Fourier Transform in the West).<br><br>Developed by Matteo Frigo and Steven G. Johnson at 
-                    MIT, FFTW has proven to be a highly efficient implementation of FFT. Its name, 'The Fastest 
-                    Fourier Transform in the West,' reflects its competitive spirit and focuses on performance.<br><br>                    
-                    FFTW has managed to position itself as one of the best options for FFT computation across 
-                    various platforms, thanks to its ability to adapt to different hardware architectures and 
-                    optimize the use of computational resources.<br><br>Over the years, FFTW has been widely 
-                    used in scientific computing applications, such as numerical simulations and signal 
-                    processing. Its modular design and ability to work with different dimensions and types of 
-                    data make it a versatile tool for any developer needing to perform fast Fourier transform 
-                    calculations efficiently.
-                </p>
-            </section>
-            <!-- Historical Overview -->
-            <section id="historical-overview" class="article-content">
-                <h2>Historical Overview of FFTW</h2>
-                <p>
-                    The FFTW project (Fastest Fourier Transform in the West) began in 1997, at a time when the 
-                    demand for faster and more efficient algorithms for performing the Fourier Transform was 
-                    booming.<br><br>In that decade, scientific computing and signal analysis were rapidly 
-                    advancing, but efficiency in Fourier calculations remained a crucial challenge in various 
-                    technological fields.<br><br>Research and improvement of algorithms for the Fast Fourier 
-                    Transform (FFT) had already spanned several decades, but there was growing interest in 
-                    optimizing both the speed and versatility of these calculations, especially for large-scale 
-                    applications.<br><br>FFTW was primarily developed by Matteo Frigo and Steven G. Johnson, two 
-                    mathematicians and computer scientists dedicated to improving algorithm performance. Frigo, 
-                    then a PhD student at MIT, and Johnson, a professor at the same institution, devised a 
-                    library that could automatically adapt to the specific architecture of any computer on which 
-                    it was executed.<br><br>This innovative approach made FFTW not only incredibly fast but also 
-                    extremely efficient across a wide variety of platforms, from simple processors to 
-                    supercomputers.<br><br>The first public version of FFTW was released in 1998 and quickly 
-                    became a reference in scientific computing, standing out for its speed.<br><br>The library 
-                    was designed to overcome the limitations of other Fast Fourier Transform implementations by 
-                    being able to automatically adapt to the architecture of the processor in use.<br><br>Over 
-                    the years, FFTW has evolved, improving its efficiency in several aspects: it added support 
-                    for multithreaded calculations, incorporated specialized variants for SIMD (Single 
-                    Instruction, Multiple Data) architectures, and optimized its algorithms for one, two, and 
-                    three-dimensional calculations.<br><br>FFTW remains one of the most widely used Fourier 
-                    libraries globally, as its latest version, FFTW 3, released in 2003, continues to be updated 
-                    and is compatible with modern processing architectures.
+                    It should also identify the extent to which work in progress can absorb equipment downtime 
+                    without affecting total production, decisions on the storage of critical spare parts that may 
+                    influence failure management strategies, and consideration of market demand fluctuations and 
+                    raw material availability that could impact operations.<br><br>For complex systems, it may be 
+                    beneficial to organize the operational context hierarchically, beginning with the 
+                    organization's general mission statement that uses the asset.<br><br>Instrumentation assets 
+                    in oil and gas fulfill desired or required functions such as accurately measuring variables 
+                    (pressure, temperature, flow, etc.), continuously monitoring processes, and generating 
+                    control signals that enable real-time automatic adjustments. On the other hand, control 
+                    systems (such as DCS or PLCs) interpret signals from instruments and adjust operations to 
+                    maintain conditions within safe and operational limits.<br><br>According to section 5.1.2 of 
+                    the SAE JA1011 standard, the functions to be identified are classified into primary and 
+                    secondary functions. Primary functions are the fundamental reasons an organization acquires 
+                    an asset or system. These functions represent the core purpose of the asset or system and are 
+                    essential to achieving the organization’s objectives.<br><br>For example, consider a 
+                    transmitter that measures level by differential pressure. The LIT-0715012 asset fulfills the 
+                    following primary functions:
+                    <ol>
+                        <li>
+                            Measuring the level in the Clarifier Tank CLFT-071692.<br><br>
+                        </li>
+                        <li>
+                            Transmitting the control signal to the PLCINS-018270 controller located in the 
+                            Control Cabinet PLCSTAP-018270.<br><br>
+                        </li>
+                        <li>
+                            Activating interlock I3 for high level in the Clarifier (H = 112.58 inH2O), 
+                            triggering the closure of valve FCV-071910 to prevent production water from entering 
+                            the Clarifier from the Fwko Tanks (TK-071011/2) and the Washing Tanks (TK-071293/4).<br><br>
+                        </li>
+                        <li>
+                            Activating interlock I8 for low level in the Clarifier (L = 104.59 inH2O), triggering 
+                            the closure of valve XV-0716021 to prevent sludge from leaving the Clarifier toward 
+                            the distribution header feeding the Sludge Pumps AP-071601A/B.<br><br>
+                        </li>
+                    </ol>
+                    According to section 6.2.1 of the SAE JA1012 standard, this means the transmitter must:<br><br>
+                    <ol>
+                        <li>
+                            <b>Measure level</b>: The primary function is to measure water level in the clarifier 
+                            tank, which is the central purpose of having a level transmitter.<br><br>
+                        </li>
+                        <li>
+                            <b>Measurement capacity</b>: The transmitter must measure levels via differential 
+                            pressure within a range of 104.59 inH2O to 112.58 inH2O, implying appropriate design 
+                            and mounting space.<br><br>
+                        </li>
+                        <li>
+                            <b>Alarm activation</b>: The references to "104.59 inH2O" and "112.58 inH2O" 
+                            establish performance standards in terms of differential pressure, which are critical 
+                            for the transmitter’s functionality in level measurement.<br><br>
+                        </li>
+                    </ol>
+                    Identifying primary functions is crucial for several reasons:
                 </p>
             </section>
-            <!-- Fundamental Concepts -->
-            <section id="fundamental-concepts" class="article-content">
+<!-- Question 2 -->
+            <section id="Question-2" class="article-content">
                 <h2>Fundamental Concepts</h2>
                 <p>
                     The Fourier Transform is a mathematical tool that converts a signal from the time domain to 
@@ -251,8 +301,8 @@
                     engineering applications, marking a milestone in FFT computation across various systems.                    
                 </p>
             </section>
-            <!-- But What Is FFTW? -->
-            <section id="but-what-is" class="article-content">
+<!-- Question 3 -->
+            <section id="Question-3" class="article-content">
                 <h2>But what is FFTW?</h2>
                 <p>
                     FFTW, which stands for 'Fastest Fourier Transform in the West', is a widely used library for 
@@ -296,8 +346,8 @@
                     </ul>
                 </p>
             </section>
-            <!-- FFTW Implementation in C++ -->
-            <section id="fftw-implementation" class="article-content">
+<!-- Question 4 -->
+            <section id="Question-4" class="article-content">
                 <h2>FFTW Implementation in C++</h2>
                 <p>
                     The implementation of FFTW in C++ follows a structured process that, although it involves 
@@ -419,8 +469,8 @@
                     </p>
                 </div>
             </section>
-            <!-- Results Analysis -->
-            <section id="results-analysis" class="article-content">
+<!-- Question 5 -->
+            <section id="Question-5" class="article-content">
                 <h2>Results Analysis</h2>
                 <p>
                     The FFT works by decomposing the original signal into a sum of sinusoidal waves of different 
@@ -460,7 +510,89 @@
                     signal or repetitive patterns in an image.
                 </p>
             </section>
-            <!-- Conclusions -->
+<!-- Question 6 -->
+            <section id="Question-6" class="article-content">
+                <h2>Results Analysis</h2>
+                <p>
+                    The FFT works by decomposing the original signal into a sum of sinusoidal waves of different 
+                    frequencies.<br><br>The process essentially converts a signal from the time domain to the 
+                    frequency domain, allowing the identification of the frequency components that make up the 
+                    original signal.<br><br>In our specific case, the FFT decomposed the input signal (a sequence 
+                    of real numbers from 0 to 15, where the values correspond to discrete points of a real 
+                    function in time) into a series of frequencies.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure9.png" alt="Console output of the FFTW execution.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 9. Console output of the FFTW execution, showing the complex output values 
+                        obtained after applying the Fast Fourier Transform to a 16-sample input signal in an 
+                        x86 environment.
+                    </p>
+                </div>
+                <p>
+                    Due to the simplicity of the signal (numbers from 0 to 15), the FFT identified that most of 
+                    the energy is concentrated in the low frequencies, which is reflected in the values obtained 
+                    in the spectrum.<br><br>The result of the FFT is a series of complex values representing the 
+                    frequencies present in the original signal. These frequencies are displayed in terms of their 
+                    amplitude and phase, allowing us to visualize which frequencies dominate in the input signal.<br><br>
+                    The complex value <i>out[0]</i> indicates the amplitude of the zero-frequency component, or the 
+                    'constant frequency' (DC). In our case, the amplitude of the constant frequency is high due 
+                    to the linear nature of the input signal.<br><br>The successive values, such as <i>out[1]</i> and 
+                    <i>out[2]</i>, indicate the amplitude and phase of the higher-frequency components. The real 
+                    values correspond to the magnitude of the sinusoidal component, while the imaginary values 
+                    indicate the phase of that frequency.<br><br>The observed pattern in the results shows that 
+                    for a linear signal, the dominant frequency is the constant one (zero frequency), which 
+                    explains the high value in <i>out[0]</i>.<br><br>As we move through the spectrum, the values 
+                    tend to decrease, indicating that higher frequencies have less impact on the original signal.<br><br>
+                    In more complex applications, such as audio analysis or image processing, the FFT can reveal 
+                    more interesting frequency components, such as the presence of specific tones in an audio 
+                    signal or repetitive patterns in an image.
+                </p>
+            </section>
+<!-- Question 7 -->
+            <section id="Question-7" class="article-content">
+                <h2>Results Analysis</h2>
+                <p>
+                    The FFT works by decomposing the original signal into a sum of sinusoidal waves of different 
+                    frequencies.<br><br>The process essentially converts a signal from the time domain to the 
+                    frequency domain, allowing the identification of the frequency components that make up the 
+                    original signal.<br><br>In our specific case, the FFT decomposed the input signal (a sequence 
+                    of real numbers from 0 to 15, where the values correspond to discrete points of a real 
+                    function in time) into a series of frequencies.
+                </p>
+                <div class="article-image">
+                    <img src="../../../assets/images/fftw-cpp-images/Figure9.png" alt="Console output of the FFTW execution.">
+                </div>
+                <div class="image-caption">
+                    <p>
+                        Figure 9. Console output of the FFTW execution, showing the complex output values 
+                        obtained after applying the Fast Fourier Transform to a 16-sample input signal in an 
+                        x86 environment.
+                    </p>
+                </div>
+                <p>
+                    Due to the simplicity of the signal (numbers from 0 to 15), the FFT identified that most of 
+                    the energy is concentrated in the low frequencies, which is reflected in the values obtained 
+                    in the spectrum.<br><br>The result of the FFT is a series of complex values representing the 
+                    frequencies present in the original signal. These frequencies are displayed in terms of their 
+                    amplitude and phase, allowing us to visualize which frequencies dominate in the input signal.<br><br>
+                    The complex value <i>out[0]</i> indicates the amplitude of the zero-frequency component, or the 
+                    'constant frequency' (DC). In our case, the amplitude of the constant frequency is high due 
+                    to the linear nature of the input signal.<br><br>The successive values, such as <i>out[1]</i> and 
+                    <i>out[2]</i>, indicate the amplitude and phase of the higher-frequency components. The real 
+                    values correspond to the magnitude of the sinusoidal component, while the imaginary values 
+                    indicate the phase of that frequency.<br><br>The observed pattern in the results shows that 
+                    for a linear signal, the dominant frequency is the constant one (zero frequency), which 
+                    explains the high value in <i>out[0]</i>.<br><br>As we move through the spectrum, the values 
+                    tend to decrease, indicating that higher frequencies have less impact on the original signal.<br><br>
+                    In more complex applications, such as audio analysis or image processing, the FFT can reveal 
+                    more interesting frequency components, such as the presence of specific tones in an audio 
+                    signal or repetitive patterns in an image.
+                </p>
+            </section>            
+<!-- Conclusions -->
             <section id="conclusions" class="article-content">
                 <h2>Conclusions</h2>
                 <p>
@@ -482,7 +614,7 @@
                     especially in scientific and engineering applications.
                 </p>
             </section>
-            <!-- Bibliography and Resources -->
+<!-- Bibliography and Resources -->
             <section id="bibliography-resources" class="article-content">
                 <h2>Bibliography and Resources</h2>
                 <p>

@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let text;
     if(window.location.pathname === '/' || window.location.href.includes('index.html')){
         text = "WELCOME TO\n\nCARLOS CRISTANCHO'S PORTFOLIO";
+    } else if(window.location.pathname === '/' || window.location.href.includes('fftw-cplusplus-en.html')) {
+        text = "THE FASTEST FOURIER TRANSFORM\n\nIN THE WEST"
     } else {
-        text = "Unraveling FFTW:\n\nThe Fastest Fourier Transform in the West"
+        text = "THE 7 QUESTIONS OF\n\nRCM"
     }
 
     let index = 0;
